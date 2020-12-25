@@ -1,18 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4bd3918a-0777-40e4-b7d6-5cd37495a5d5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/DZIPortal.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assests/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assests/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assests/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assests/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assests/DZILogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assests/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assests/prod1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assests/prod2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assests/prod3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assests/prod4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assests/prod5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/navMenu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
+  <component name="ProjectId" id="1lwzyrTXJvIV6PzsigafjmwdMYd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="D:/Program Files/xampp/htdocs" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assests" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\DZIPortal\assests" />
+      <recent name="D:\xampp\htdocs\DZIPortal" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\DZIPortal\assests" />
+      <recent name="D:\xampp\htdocs\DZIPortal\html" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/DZIPortal/index.html">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4bd3918a-0777-40e4-b7d6-5cd37495a5d5" name="Default Changelist" comment="" />
+      <created>1608523198773</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608523198773</updated>
+      <workItem from="1608523199924" duration="63363000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

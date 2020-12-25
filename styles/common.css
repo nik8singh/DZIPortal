@@ -1,0 +1,372 @@
+/*css reset*/
+/*https://stackoverflow.com/questions/18772154/white-space-at-top-of-page*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.featured_top img:hover {
+    -webkit-filter: brightness(102%);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ---------------------------------------------------
+    HEADER
+----------------------------------------------------- */
+
+.body_container {
+
+    width: 100%;
+    max-width: 1800px;
+    align-self: center;
+}
+
+#logoRow {
+    min-height: 89px;
+    max-height: 89px;
+}
+
+#emptydiv {
+    min-height: 100px;
+    flex-grow: 2;
+    margin: 10px;
+}
+
+#logo {
+    flex-grow: 2;
+    padding-top: 10px;
+}
+
+.logo_img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+
+#userMenu {
+    display: flex;
+    align-items: center;
+    line-height: 89px;
+    font-family: 'Poppins', sans-serif;
+    flex-grow: .5;
+}
+
+.websiteSearch {
+    border-bottom: 2px solid;
+    border-color: #565656;
+    background-color: transparent;
+    height: 20px;
+    width: 200px;
+    padding-right: 20px;
+    padding-bottom: 8px;
+    line-height: 25px;
+}
+
+.websiteSearchBtn {
+    margin-left: -20px !important;
+    margin-right: 20px;
+    padding-bottom: 8px;
+    width: 20px;
+    border: 0;
+    -webkit-appearance: none !important;
+}
+
+#userMenu > * {
+    margin-left: 20px;
+}
+
+#userMenu i {
+    font-size: 20px;
+    color: #1B1B1B;
+}
+
+#menuButton {
+    display: none;
+}
+
+#sideMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    z-index: 2;
+    padding: 0;
+    height: 100%;
+    min-height: 500px;
+    overflow: scroll;
+    background-color: #373636;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    /*transition: 0.3s;*/
+}
+
+.sideMenuOptions ul {
+    font-size: 25px;
+    list-style-type: none;
+    align-items: center;
+}
+
+.sideMenuOptions > ul > li {
+    padding: 10px;
+    overflow: scroll;
+}
+
+.sideMenuOptions > ul > li:hover {
+    background-color: #6b6969;
+    color: darkturquoise;
+}
+
+#sideMenuBk {
+    position: fixed;
+    overflow: hidden;
+    min-height: 100%;
+    width: 0;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#menuNav {
+    position: sticky;
+    top: 0;
+    border-bottom: rgba(27, 27, 27, 0.2) 1px solid;
+    border-top: rgba(27, 27, 27, 0.2) 1px solid;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    min-height: 40px;
+}
+
+.menuNavUL {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menuNavUL li {
+    padding: 14px 16px;
+}
+
+.menu_name {
+    font-weight: normal;
+    padding-right: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+/* ---------------------------------------------------
+    HOVER DROPDOWN IN HEADER
+----------------------------------------------------- */
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    max-height: 20px;
+    line-height: normal;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 150px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 1px 10px;
+    display: block;
+    line-height: 40px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* ---------------------------------------------------
+    Footer classes
+----------------------------------------------------- */
+
+footer {
+    padding-top: 30px;
+    border-top: rgb(176, 59, 0) 1px solid;
+    background-color: #F7F5F3 !important;
+    width: 100%;
+}
+
+.footer_container {
+    width: 90%;
+}
+
+.footer_columns, .footer_legal {
+    margin-bottom: 20px;
+}
+
+.footer_panel {
+    width: 200px;
+    margin: 10px;
+}
+
+.footer_panel h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #6b6969;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: rgba(27, 27, 27, 0.2) 1px solid;
+}
+
+.footer_panel ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.footer_panel li {
+    margin-top: 4px;
+}
+
+.footer_container a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    text-decoration: none !important;
+    color: #6b6969;
+}
+
+.footer_legal {
+    /*border-top: rgba(27, 27, 27, 0.2) 1px solid;*/
+    width: 60%;
+    padding-top: 10px;
+    align-self: center;
+}
+
+.footer_legal ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* ---------------------------------------------------
+        Common classes
+----------------------------------------------------- */
+.big_white {
+    background-color: #fff;
+}
+
+#userMenu i:hover, #emptydiv:hover, .menuNavUL li:hover,
+.horizon_arrow:hover, .product_pane img:hover ~ .product_name > a, a:hover {
+    color: darkturquoise !important;
+    cursor: pointer;
+}
+
+.flex_wrapped_column {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex_wrapped_row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mobileSearch {
+    display: none;
+    text-align: center;
+    margin: 15px;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 992px) {
+
+    .footer_legal {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 820px) {
+
+    #userMenu {
+        display: none;
+    }
+
+    #menuNav {
+        display: none;
+    }
+
+    #menuButton {
+        display: block;
+        font-size: xx-large;
+    }
+
+    #mobileSearch {
+        display: block;
+    }
+
+    .footer_legal {
+
+        width: 95%;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .logo_img {
+        width: 80%;
+        max-width: 350px;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+
+
+}
+
