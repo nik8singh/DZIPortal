@@ -180,6 +180,9 @@
         align-self: center;
     }
 
+    .mobileFlex {
+        flex-direction: column-reverse;
+    }
 
 }
 
@@ -215,7 +218,6 @@
     .popular_product_column {
         flex-direction: column;
     }
-
 
     .product_pane {
         margin: 30px 0;

@@ -1,0 +1,88 @@
+a.button1 {
+    display: inline-block;
+    padding: 0.7em 1.7em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #3369ff;
+    box-shadow: inset 0 -0.6em 1em -0.35em rgba(0, 0, 0, 0.17), inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15), inset 0 0 0 0.05em rgba(255, 255, 255, 0.12);
+    text-align: center;
+    position: relative;
+}
+
+a.button1:active, .button2:active {
+    box-shadow: inset 0 0.6em 2em -0.3em rgba(0, 0, 0, 0.15), inset 0 0 0 0.05em rgba(255, 255, 255, 0.12);
+}
+
+a.button1:hover {
+    color: #FFFFFF !important;
+}
+
+@media all and (max-width: 30em) {
+    a.button1 {
+        display: block;
+        margin: 0.4em auto;
+    }
+}
+
+.button2 {
+    padding: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    border: #565656 solid 1px;
+}
+
+
+.button4:active,
+.button4:hover {
+    color: #1B1B1B !important;
+}
+
+.button4 {
+    padding: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    color: #FFFFFF;
+    text-align: center;
+    background-color: rgb(104, 200, 198);
+
+}
+
+.button3 {
+    padding: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    max-height: 25px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.16, rgb(207, 207, 207)), color-stop(0.79, rgb(252, 252, 252)));
+    background-image: linear-gradient(to top, rgb(207, 207, 207) 16%, rgb(252, 252, 252) 79%);
+    border: 1px solid #404040;
+}
+
+.checkbox {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    vertical-align: middle;
+    margin-top: 5px;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+}
+
+.checkbox > span {
+    color: #34495E;
+    padding: 0 5px;
+
+}
+
+.checkbox > input {
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+}

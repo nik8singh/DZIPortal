@@ -15,7 +15,8 @@
 }
 
 a {
-    text-decoration: none;
+    text-decoration: inherit;
+    color: inherit;
 }
 
 /* ---------------------------------------------------
@@ -47,6 +48,7 @@ a {
 
 .logo_img {
     width: 100%;
+    min-width: 200px;
     max-width: 350px;
     height: auto;
 }
@@ -101,11 +103,11 @@ a {
     padding: 0;
     height: 100%;
     min-height: 500px;
-    overflow: scroll;
     background-color: #373636;
     color: white;
     font-family: 'Poppins', sans-serif;
-    /*transition: 0.3s;*/
+    transition: 0.3s;
+    display: none;
 }
 
 .sideMenuOptions ul {
@@ -115,8 +117,14 @@ a {
 }
 
 .sideMenuOptions > ul > li {
+    /*overflow: scroll;*/
+}
+
+.sideMenuOptions > ul > li > a {
+    width: 100%;
+    height: 100%;
+    display: block;
     padding: 10px;
-    overflow: scroll;
 }
 
 .sideMenuOptions > ul > li:hover {
@@ -136,7 +144,7 @@ a {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-#menuNav {
+#menuNav #filterMenuNav {
     position: sticky;
     top: 0;
     border-bottom: rgba(27, 27, 27, 0.2) 1px solid;
@@ -157,7 +165,7 @@ a {
     font-family: 'Poppins', sans-serif;
 }
 
-.menuNavUL li {
+.menuNavUL a {
     padding: 14px 16px;
 }
 
@@ -284,8 +292,8 @@ footer {
     background-color: #fff;
 }
 
-#userMenu i:hover, #emptydiv:hover, .menuNavUL li:hover,
-.horizon_arrow:hover, .product_pane img:hover ~ .product_name > a, a:hover {
+#userMenu i:hover, #menuButton:hover, #filterMenuButton:hover, .menuNavUL li:hover,
+.horizon_arrow:hover, .checkbox span:hover, .checkbox input:hover > .checkbox span, .product_pane img:hover ~ .product_name > a, a:hover {
     color: darkturquoise !important;
     cursor: pointer;
 }

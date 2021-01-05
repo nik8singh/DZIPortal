@@ -2,30 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bd3918a-0777-40e4-b7d6-5cd37495a5d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/DZIPortal.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assests/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assests/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assests/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assests/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assests/DZILogo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assests/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assests/prod1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assests/prod2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assests/prod3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assests/prod4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assests/prod5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/navMenu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/common.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/New page template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assests/mylogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/shop.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shopHome.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/myfields.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/shop.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assests/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/assests/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/navMenu.html" beforeDir="false" afterPath="$PROJECT_DIR$/navMenu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/home.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +34,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -60,30 +56,33 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\xampp\htdocs\DZIPortal\assests" />
       <recent name="D:\xampp\htdocs\DZIPortal" />
+      <recent name="D:\xampp\htdocs\DZIPortal\assests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\xampp\htdocs\DZIPortal\assests" />
+      <recent name="D:\xampp\htdocs\DZIPortal" />
+      <recent name="D:\xampp\htdocs\DZIPortal\styles" />
       <recent name="D:\xampp\htdocs\DZIPortal\html" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/DZIPortal/index.html">
+    <configuration name="home.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/DZIPortal/home.html">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.home.html" />
       </list>
     </recent_temporary>
   </component>
@@ -95,15 +94,41 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608523198773</updated>
-      <workItem from="1608523199924" duration="63363000" />
+      <workItem from="1608523199924" duration="68003000" />
+      <workItem from="1609114445553" duration="39708000" />
     </task>
+    <task id="LOCAL-00001" summary="Home page responsive completed">
+      <created>1608883235438</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608883235438</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Home page responsive completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Home page responsive completed" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
