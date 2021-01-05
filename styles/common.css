@@ -35,12 +35,6 @@ a {
     max-height: 89px;
 }
 
-#emptydiv {
-    min-height: 100px;
-    flex-grow: 2;
-    margin: 10px;
-}
-
 #logo {
     flex-grow: 2;
     padding-top: 10px;
@@ -58,7 +52,7 @@ a {
     align-items: center;
     line-height: 89px;
     font-family: 'Poppins', sans-serif;
-    flex-grow: .5;
+    flex-grow: 1;
 }
 
 .websiteSearch {
@@ -144,7 +138,7 @@ a {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-#menuNav #filterMenuNav {
+#menuNav {
     position: sticky;
     top: 0;
     border-bottom: rgba(27, 27, 27, 0.2) 1px solid;
@@ -153,6 +147,7 @@ a {
     margin-top: 20px;
     margin-bottom: 20px;
     background-color: rgba(255, 255, 255, 0.8);
+    max-height: 52px;
     min-height: 40px;
 }
 
@@ -171,7 +166,6 @@ a {
 
 .menu_name {
     font-weight: normal;
-    padding-right: 4px;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
 }
@@ -216,6 +210,14 @@ a {
     display: block;
 }
 
+.errorMsg {
+    color: darkred;
+    margin: 10px;
+    background-color: rgba(255, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5%;
+    display: none;
+}
 
 /* ---------------------------------------------------
     Footer classes
@@ -294,7 +296,7 @@ footer {
 
 #userMenu i:hover, #menuButton:hover, #filterMenuButton:hover, .menuNavUL li:hover,
 .horizon_arrow:hover, .checkbox span:hover, .checkbox input:hover > .checkbox span, .product_pane img:hover ~ .product_name > a, a:hover {
-    color: darkturquoise !important;
+    color: #009c9f !important;
     cursor: pointer;
 }
 
@@ -318,11 +320,22 @@ footer {
     align-items: center;
 }
 
-#mobileSearch {
+.flex_space_between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mobileHeader {
     display: none;
-    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
     margin: 15px;
 }
+
+#mobileSearch {
+    text-align: center;
+}
+
 
 /* ---------------------------------------------------
     MEDIAQUERIES
@@ -354,8 +367,8 @@ footer {
         font-size: xx-large;
     }
 
-    #mobileSearch {
-        display: block;
+    .mobileHeader {
+        display: flex;
     }
 
     .footer_legal {

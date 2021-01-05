@@ -26,21 +26,20 @@
 </head>
 <body>
 
-<div id="sideMenuBk"></div>
-
-<header class="flex_wrapped_column" id="header"></header>
-
-<div class="flex_center" id="menuNav"></div>
-
-<div id="mobileSearch">
-    <input class="websiteSearch" placeholder="Search Site" style="width: 200px" type="text"/>
-    <button class="websiteSearchBtn" type="submit"><i class="fas fa-search"></i></button>
-</div>
 <div class="container">
-    <div class="login-container">
-        <h2>Sign-In</h2>
+    <div class="login-container" id="mainContainer">
+
+        <div style="display: flex">
+            <h2>Sign-In</h2>
+            <a class="mobile_sign_up" href="#newCustomerInfoPanel">New Customer?</a>
+        </div>
         <hr>
+
         <form id="login" name="login">
+            <div class="errorMsg">
+                <i class="fas fa-times"></i>
+                <span class="message">Username and Password were not recognised. Please try again</span>
+            </div>
             <div class="form-group">
                 <label for="username" style="margin-bottom: 5px">Email</label>
                 <input autocomplete="email" autofocus class="form-control" id="username" name="username" required type="email">
@@ -60,8 +59,10 @@
                 <a class="trigger_popup" href="#">Details <i class="fas fa-sort-down"></i></a>
             </div>
 
-            <div class="form-group signin">
-                <a class="button1" href="#" style="background-color:#2979FF">Login</a>
+            <div style="display: flex;">
+                <div class="form-group signin">
+                    <input class="submitBtn" type="submit" value="Login">
+                </div>
             </div>
 
             <div class="form-group linkStyle">
@@ -69,8 +70,6 @@
             </div>
 
             <hr style="opacity: 20%">
-
-            <a class="button1 createNewAccount" href="#" style="background-color:#024c02">Create a new account</a>
         </form>
 
         <form hidden id="resetPassword" name="resetPassword">
@@ -82,7 +81,7 @@
                 <input autocomplete="email" class="form-control" id="forgot_username" name="forgot_username" required type="email">
             </div>
             <div class="form-group signin">
-                <a class="button1 restPassword" href="#" style="background-color:#2979FF">Reset my password</a>
+                <input class="submitBtn restPassword" type="submit" value="Reset my password">
             </div>
         </form>
 
@@ -93,8 +92,8 @@
             <div class="form-group">
                 <label for="firstName" style="margin-bottom: 5px">Your name</label>
                 <div class="username">
-                    <input autocomplete="given-name" class="form-control" id="firstName" name="firstName" placeholder="First Name">
-                    <input autocomplete="family-name" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
+                    <input autocomplete="given-name" class="form-control" id="firstName" name="firstName" placeholder="First Name" required type="text">
+                    <input autocomplete="family-name" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required type="text">
                 </div>
             </div>
             <div class="form-group">
@@ -120,7 +119,7 @@
 
 
             <div class="form-group" style="margin-bottom: 0">
-                <a class="button1 signup" href="#" style="background-color:#2979FF">Create your DZI account</a>
+                <input class="submitBtn signup" type="submit" value="Create Account">
             </div>
 
             <div class="form-group linkStyle">
@@ -130,6 +129,21 @@
 
         </form>
 
+    </div>
+
+
+    <div class="register-container">
+        <div class="create_account_info" id="newCustomerInfoPanel">
+            <h3>New Customers</h3>
+            <P>Sign up for a DZI Creations account!</P>
+            <a class="button1 createNewAccount" href="#mainContainer">Create a new account</a>
+        </div>
+        <div class="new_account_info_content">
+            <h4>Benefits of Creating an Account</h4>
+            <p><strong>News and exclusive offers!</strong><br>Sign up to receive email updates on special promotions.</p>
+            <p><strong>Order History</strong><br>Keep track of your previous orders</p>
+            <p><strong>Faster Checkout</strong><br>Save and pre-populate information to shop faster and safer<br>
+        </div>
     </div>
 
 

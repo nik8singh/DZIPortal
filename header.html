@@ -1,8 +1,5 @@
-<div class="flex_center" id="logoRow">
-
-    <div class="flex_center" id="emptydiv">
-        <i class="fas fa-bars" hidden id="menuButton"></i>
-    </div>
+<div id="sideMenuBk"></div>
+<header class="flex_space_between" id="logoRow">
 
     <div class="flex_center" id="logo">
         <a href="home.html"><img alt="logo" class="logo_img" src="assests/mylogo.png"></a>
@@ -11,31 +8,30 @@
     <div id="userMenu">
         <input class="websiteSearch" placeholder="Search Site" style="width: 200px" type="text"/>
         <button class="websiteSearchBtn" type="submit"><i class="fas fa-search"></i></button>
-
-        <div style="display: flex; justify-content: center">
-            <div class="dropdown">
-
-                <a href="login.html"> Login / Sign up</a>
-                <!--                <a class="dropbtn" href="#"><i class="fas fa-user"> <span class="menu_name">Nikhil</span> </i></a>-->
-                <!--                <div class="dropdown-content">-->
-                <!--                    <a href="#">My Account</a>-->
-                <!--                    <a href="#">My orders</a>-->
-                <!--                    <a href="#">Shopping Bag</a>-->
-                <!--                    <a href="#">Wishlist</a>-->
-                <!--                    <a href="#" style="border-top: 1px solid #303030 ">Logout</a>-->
-                <!--                </div>-->
+        <a href="login.html" id="loginLink"> Login / Sign up</a>
+        <div class="dropdown">
+            <div id="accountOptions">
+                <a class="dropbtn" href="#"><i class="fas fa-user"> <span class="menu_name">Account</span> </i></a>
+                <div class="dropdown-content">
+                    <a href="#">My Account</a>
+                    <a href="#">My Orders</a>
+                    <a href="#">Shopping Bag</a>
+                    <a href="#" id="logout" style="border-top: rgba(27, 27, 27, 0.2) 1px solid">Logout</a>
+                </div>
             </div>
         </div>
 
-        <div style="display: flex; justify-content: center">
-            <div class="dropdown">
-                <a class="dropbtn" href="#"><i class="fas fa-shopping-bag"> <span class="menu_name">My Bag</span> </i></a>
-            </div>
+        <div class="dropdown">
+            <a class="dropbtn" href="#"><i class="fas fa-shopping-bag"> <span class="menu_name">My Bag</span> </i></a>
+        </div>
+
+        <div class="dropdown">
+            <a class="dropbtn" href="#"><i class="fas fa-heart"> <span class="menu_name">My Wish</span> </i></a>
         </div>
 
     </div>
 
-</div>
+</header>
 
 <div id="sideMenu">
     <div style="height: 10px;  display: flex; justify-content: flex-end">
@@ -58,5 +54,30 @@
             <li><a>Blog</a></li>
             <li style="border-top: rgba(236,93,93,0.5) 1px solid; margin-top: 20px">logout</li>
         </ul>
+    </div>
+</div>
+
+<div class="flex_center" id="menuNav">
+    <nav>
+        <ul class="menuNavUL flex_wrapped_row">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="shopHome.html" id="shopMenu">Shop</a></li>
+            <li><a>Customize</a></li>
+            <li><a>Collections</a></li>
+            <li><a>Shows and Exhibitions</a></li>
+            <li><a>About Us</a></li>
+            <li><a>Blog</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="mobileHeader">
+    <div class="flex_center">
+        <i class="fas fa-bars" hidden id="menuButton"></i>
+    </div>
+
+    <div id="mobileSearch">
+        <input class="websiteSearch" placeholder="Search Site" style="width: 230px" type="text"/>
+        <button class="websiteSearchBtn" type="submit"><i class="fas fa-search"></i></button>
     </div>
 </div>

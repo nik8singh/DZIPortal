@@ -1,12 +1,31 @@
+import SessionHandler from "./utils/sessionHandler.js";
+
+export let sessionHandler = new SessionHandler();
 $(document).ready(function () {
 
-    $('#header').load('header.html');
-    $('#menuNav').load('navMenu.html');
+    $.get("header.html", function (data) {
+        $('body').prepend(data);
+
+        if (typeof $.cookie('TSS') !== 'undefined') {
+            $("#loginLink").hide();
+            $("#accountOptions").show();
+
+        } else {
+            $("#loginLink").show();
+            $("#accountOptions").hide();
+        }
+    });
+
     $('#footer').load('footer.html');
     const scale = 'scale(1)';
     document.body.style.webkitTransform = scale;    // Chrome, Opera, Safari
     document.body.style.msTransform = scale;       // IE 9
     document.body.style.transform = scale;     // General
+
+});
+$(document).on("click", "#logout", function () {
+    sessionHandler.logoutUser();
+    location.reload();
 });
 
 $(document).on("click", "#menuButton", function (e) {
