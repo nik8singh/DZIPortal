@@ -63,8 +63,12 @@ hr {
     /*border: rgba(27, 27, 27, 0.2) 1px solid;*/
     border-radius: 2%;
     margin: 70px 20px;
-    padding: 30px;
+    padding: 0 30px;
     text-align: left;
+}
+
+form {
+    position: relative;
 }
 
 .form-group {
@@ -83,7 +87,7 @@ hr {
     padding-left: 10px;
     width: 100%;
     max-width: 345px;
-    /*border: #11cfcf 1px solid;*/
+    border: #014a4a 1px solid;
     background-color: #FFFFFF;
 }
 
@@ -189,7 +193,7 @@ hr {
 }
 
 .register-container {
-    font-size: 15px;
+    font-size: 16px;
     color: #303030;
 }
 
@@ -199,7 +203,7 @@ hr {
 
 .create_account_info h3 {
     font-weight: 600;
-    font-size: 17px;
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
@@ -208,7 +212,7 @@ hr {
 }
 
 .new_account_info_content h4 {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 400;
     margin: 20px 0;
 }

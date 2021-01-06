@@ -36,7 +36,7 @@
         <hr>
 
         <form id="login" name="login">
-            <div class="errorMsg">
+            <div class="errorMsg" id="loginErrorMsg">
                 <i class="fas fa-times"></i>
                 <span class="message">Username and Password were not recognised. Please try again</span>
             </div>
@@ -89,6 +89,14 @@
             <div class="form-group linkStyle">
                 <a class="backToSignIn" href="#">Back to Sign in</a>
             </div>
+            <div class="errorMsg" id="registerErrorMsg">
+                <i class="fas fa-times"></i>
+                <span class="message"></span>
+            </div>
+            <div class="successMsg" id="registerSuccessMsg">
+                <i class="fas fa-check"></i>
+                <span class="message">Your account is registered successfully, please log in.</span>
+            </div>
             <div class="form-group">
                 <label for="firstName" style="margin-bottom: 5px">Your name</label>
                 <div class="username">
@@ -126,9 +134,7 @@
                 <p>By creating an account, you agree to DZI Creation's
                     <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.</p>
             </div>
-
         </form>
-
     </div>
 
 

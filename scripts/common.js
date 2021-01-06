@@ -9,7 +9,9 @@ $(document).ready(function () {
         if (typeof $.cookie('TSS') !== 'undefined') {
             $("#loginLink").hide();
             $("#accountOptions").show();
-
+            let fn = localStorage.getItem("FN");
+            if (fn !== null)
+                $("#userFN").text(localStorage.getItem("FN").toUpperCase());
         } else {
             $("#loginLink").show();
             $("#accountOptions").hide();
@@ -25,7 +27,6 @@ $(document).ready(function () {
 });
 $(document).on("click", "#logout", function () {
     sessionHandler.logoutUser();
-    location.reload();
 });
 
 $(document).on("click", "#menuButton", function (e) {
