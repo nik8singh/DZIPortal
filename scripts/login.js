@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     $(".forgotPassword").on("click", function (event) {
         hideLogin("Forgot Password");
-        $("#resetPassword").show();
+        $("#forgotPassword").show();
     });
 
     $(".createNewAccount").on("click", function (event) {
@@ -115,17 +115,17 @@ $("#login").on("submit", function (event) {
     return false;
 });
 
-
 $("#newAccount").on("submit", function (event) {
     event.preventDefault();
-    $("#registerErrorMsg").hide();
+    let msgElement = $("#registerErrorMsg");
+    msgElement.hide();
 
     let new_password = $("#new-account-password").val();
     let password_confirmation = $("#new-account-password-confirmation").val();
 
     if (new_password !== password_confirmation || password_confirmation === null) {
         $("#registerErrorMsg .message").text("password confirmation doesn't match");
-        $("#registerErrorMsg").show();
+        msgElement.show();
         return;
     }
     let item = {};
@@ -158,7 +158,7 @@ $("#newAccount").on("submit", function (event) {
                 msg = "Something went wrong.";
 
             $("#registerErrorMsg .message").text(msg);
-            $("#registerErrorMsg").show();
+            msgElement.show();
 
         },
         complete: function () {
@@ -168,3 +168,81 @@ $("#newAccount").on("submit", function (event) {
     return false;
 });
 
+$("#forgotPassword").on("submit", function (event) {
+    event.preventDefault();
+    let msgElement = $("#forgotPasswordMsg");
+    msgElement.hide();
+    let item = {};
+    item['userEmail'] = $("#forgot_username").val();
+
+    $(this).prepend("<div hidden id=\"loading\">\n" +
+        "    <img alt=\"Loading...\" id=\"loading-image\" src=\"assets/Ripple-loading.gif\"/>\n" +
+        "</div>")
+
+    $.ajax({
+        url: new ApiUrls().user_url + "cusacc/pwresetrequest",
+        type: 'POST',
+        data: JSON.stringify(item),
+        contentType: 'application/json',
+        success: function (response) {
+            $("#forgotPasswordMsg .message").text("Instructions to reset your password were sent to your email");
+        },
+        error: function (request, error, errorThrown) {
+        },
+        complete: function () {
+            $("#forgot_username").val("");
+            msgElement.show();
+            $("#loading").remove();
+        }
+    });
+    return false;
+});
+
+$("#resetPassword").on("submit", function (event) {
+    event.preventDefault();
+    let passwordConfirmation = $("#password_reset_confirmation");
+    let newPassword = $("#new_reset_password");
+    let msgElementSuccess = $("#resetPasswordMsgSuccess");
+    let msgElementError = $("#resetPasswordMsgError");
+    msgElementError.hide();
+    msgElementError.hide();
+
+    if (newPassword.val() !== passwordConfirmation.val()) {
+        $("#resetPasswordMsgError .message").text("password confirmation doesn't match");
+        msgElementError.show();
+        return;
+    }
+
+
+    let item = {};
+    item['userPassword'] = passwordConfirmation.val();
+
+    let url_string = location.search.substring(1).split("tk=")[1];
+
+    $(this).prepend("<div hidden id=\"loading\">\n" +
+        "    <img alt=\"Loading...\" id=\"loading-image\" src=\"assets/Ripple-loading.gif\"/>\n" +
+        "</div>")
+
+    $.ajax({
+        url: new ApiUrls().user_url + "updatepw/" + url_string,
+        type: 'POST',
+        data: JSON.stringify(item),
+        contentType: 'application/json',
+        success: function (response) {
+            passwordConfirmation.val("");
+            newPassword.val("");
+
+            $("#resetPasswordMsgSuccess .message").text("Password was updated successfully");
+            msgElementSuccess.show();
+            console.log(response)
+        },
+        error: function (request, error, errorThrown) {
+            $("#resetPasswordMsgError .message").text("Something went wrong. Please try requesting reset email again");
+            msgElementError.show();
+        },
+        complete: function () {
+            $("#loading").remove();
+        }
+    });
+    return false;
+});

@@ -95,10 +95,11 @@
     width: 100%;
     /*padding: 10px;*/
     margin: 10px;
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: start;
     flex-wrap: wrap;
+
 }
 
 .shop_product_pane {
@@ -129,11 +130,27 @@
     margin-top: 30px;
 }
 
+.category_title_info {
+    display: flex;
+}
+
+.moreCategory {
+    align-self: center;
+    font-size: 18px;
+    color: #373737;
+    margin-right: 10px;
+}
+
 .category_title hr {
     width: 100%;
     background-color: rgba(27, 27, 27, 0.2);
     height: 1px;
     margin-top: 10px;
+}
+
+.category_title:hover {
+    cursor: pointer;
+
 }
 
 .list_all {

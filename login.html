@@ -72,12 +72,16 @@
             <hr style="opacity: 20%">
         </form>
 
-        <form hidden id="resetPassword" name="resetPassword">
+        <form hidden id="forgotPassword" name="forgotPassword">
             <div class="form-group linkStyle">
                 <a class="backToSignIn" href="#">Back to Sign in</a>
             </div>
+            <div class="successMsg" id="forgotPasswordMsg">
+                <i class="fas fa-check"></i>
+                <span class="message"></span>
+            </div>
             <div class="form-group forgotPasswordEmail">
-                <label for="username" style="margin-bottom: 5px">Enter your email</label>
+                <label for="forgot_username" style="margin-bottom: 5px">Enter your email</label>
                 <input autocomplete="email" class="form-control" id="forgot_username" name="forgot_username" required type="email">
             </div>
             <div class="form-group signin">
@@ -137,7 +141,6 @@
         </form>
     </div>
 
-
     <div class="register-container">
         <div class="create_account_info" id="newCustomerInfoPanel">
             <h3>New Customers</h3>
@@ -151,7 +154,6 @@
             <p><strong>Faster Checkout</strong><br>Save and pre-populate information to shop faster and safer<br>
         </div>
     </div>
-
 
     <div class="popup-info">
         <span class="helper"></span>
