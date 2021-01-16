@@ -47,6 +47,7 @@ $(document).ready(function () {
         $heading.parent().find("h2").text("Sign-in")
         $("#resetPassword").hide();
         $("#newAccount").hide();
+        $("#forgotPassword").hide();
         $("#login").show();
         $mobileSignUp.text("New Customer?");
     });
