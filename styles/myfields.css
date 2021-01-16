@@ -52,7 +52,9 @@ a.button1:hover, .submitBtn:hover {
 
 .button4:active,
 .button4:hover {
-    color: #1B1B1B !important;
+    font-weight: 600;
+    background-color: rgb(74, 141, 139);
+    color: #FFFFFF !important;
 }
 
 .button4 {
@@ -70,9 +72,9 @@ a.button1:hover, .submitBtn:hover {
     font-size: 13px;
     cursor: pointer;
     max-height: 25px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
+    -webkit-border-radius: 25%;
+    -moz-border-radius: 25%;
+    border-radius: 25%;
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.16, rgb(207, 207, 207)), color-stop(0.79, rgb(252, 252, 252)));
     background-image: linear-gradient(to top, rgb(207, 207, 207) 16%, rgb(252, 252, 252) 79%);
     border: 1px solid #404040;

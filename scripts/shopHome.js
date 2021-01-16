@@ -4,7 +4,7 @@ $(document).ready(function () {
 });
 
 $(document).on("click", ".category_title", function (e) {
-    let icon = $(this).find("i"), listDiv = $(this).next(".product-list-panel");
+    let icon = $(this).find("i"), listDiv = $(this).next(".category-list-panel");
 
     console.log(listDiv)
 
