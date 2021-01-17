@@ -33,7 +33,6 @@ export default class SessionHandler {
         this.idleInterval = window.setInterval(function () {
             //Increment the idle time counter every minute.
             self.idleTime++;
-            console.log(self.idleTime);
 
             if (self.idleTime === 15) {
                 self.startRefreshInterval();

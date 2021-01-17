@@ -1,3 +1,33 @@
+import ProductPanelGenerator from "./utils/productPanelGenerator.js"
+import AjaxCall from "./utils/ajaxCall.js";
+import ApiUrls from "./domains/apiUrls.js";
+
+$(document).ready(function () {
+
+    getFeaturedProducts();
+});
+
+function getFeaturedProducts() {
+
+
+    const ajaxCall = new AjaxCall(new ApiUrls().product_url + "vis/list/featured", 'GET');
+    ajaxCall.makeCall(populatePopularProducts);
+}
+
+function populatePopularProducts(data) {
+    const productHtmlGenerator = new ProductPanelGenerator();
+    let $popularProductColumn = $(".popular_product_column");
+    $.each(data, function (index, elementParent) {
+        if ($.isArray(elementParent)) {
+            $.each(elementParent, function (index, element) {
+                let productHtml = productHtmlGenerator.generate(element);
+                $popularProductColumn.append(productHtml);
+            });
+        }
+    });
+}
+
+
 $('#horizon-prev').click(function (event) {
     event.preventDefault();
     let $content = $('.popular_product_column');

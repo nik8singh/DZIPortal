@@ -121,6 +121,7 @@
 
 .product_name {
     align-self: center;
+    text-align: center;
     word-wrap: break-word;
     font-weight: 500;
     font-size: 14px;
@@ -143,12 +144,13 @@
 }
 
 .price {
-    color: #212121;
+    color: #026654;
+    font-size: 16px;
 }
 
 .product_buttons > a {
     margin-left: 20px;
-    font-size: 17px;
+    font-size: 15px;
     color: #212121;
 }
 
