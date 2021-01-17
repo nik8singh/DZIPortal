@@ -30,7 +30,7 @@ $(document).ready(function () {
     $(".createNewAccount").on("click", function (event) {
         hideLogin("Create account");
         $("#newAccount").show();
-        $('html, body').animate({
+        $('errors, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top
         }, 500);
     });
@@ -54,7 +54,7 @@ $(document).ready(function () {
 
     $mobileSignUp.on('click', function (event) {
         event.preventDefault();
-        $('html, body').animate({
+        $('errors, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top
         }, 500);
     });
@@ -98,12 +98,14 @@ $("#login").on("submit", function (event) {
                 },
                 success: function (res) {
                     localStorage.setItem("FN", res);
+                    if ($('#keepActive').is(':checked'))
+                        $.cookie("KP", true, {path: '/'});
                 }, error: function (jqXHR, exception) {
                     console.log(jqXHR.status);
                     console.log(exception);
                 }, complete: function () {
                     $("#loading").remove();
-                    window.location.replace("index.html");
+                    window.location.replace("index.errors");
                 }
             });
 

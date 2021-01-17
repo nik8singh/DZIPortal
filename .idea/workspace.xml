@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bd3918a-0777-40e4-b7d6-5cd37495a5d5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/errors/403.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/utils/ajaxCall.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/common.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/utils/sessionHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/utils/sessionHandler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/home.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/errors" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -63,10 +64,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\DZIPortal\errors" />
       <recent name="D:\xampp\htdocs\DZIPortal" />
       <recent name="D:\xampp\htdocs\DZIPortal\assests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\DZIPortal\scripts\utils" />
       <recent name="D:\xampp\htdocs\DZIPortal\assests" />
       <recent name="D:\xampp\htdocs\DZIPortal" />
       <recent name="D:\xampp\htdocs\DZIPortal\styles" />
@@ -94,7 +97,7 @@
       <workItem from="1608523199924" duration="68003000" />
       <workItem from="1609114445553" duration="39708000" />
       <workItem from="1610342530944" duration="7256000" />
-      <workItem from="1610778520828" duration="15150000" />
+      <workItem from="1610778520828" duration="20242000" />
     </task>
     <task id="LOCAL-00001" summary="Home page responsive completed">
       <created>1608883235438</created>
@@ -124,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610825148836</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="mirror css changes">
+      <created>1610844489289</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1610844489289</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +241,8 @@
     <MESSAGE value="login and registration implemented&#10;returning deleted users yet to be implemented" />
     <MESSAGE value="fix back to sign in on forgot password" />
     <MESSAGE value="product page&#10;mirror css changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="product page&#10;mirror css changes" />
+    <MESSAGE value="mirror css changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="mirror css changes" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
