@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bd3918a-0777-40e4-b7d6-5cd37495a5d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/product.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/product.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New page template.html" beforeDir="false" afterPath="$PROJECT_DIR$/New page template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/shopHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/shopHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopHome.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopHome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/common.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/myfields.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/myfields.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/shop.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +28,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Nikhil Singh &lt;nscoder8@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
@@ -93,7 +94,7 @@
       <workItem from="1608523199924" duration="68003000" />
       <workItem from="1609114445553" duration="39708000" />
       <workItem from="1610342530944" duration="7256000" />
-      <workItem from="1610778520828" duration="11662000" />
+      <workItem from="1610778520828" duration="15150000" />
     </task>
     <task id="LOCAL-00001" summary="Home page responsive completed">
       <created>1608883235438</created>
@@ -116,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610778942071</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="product page&#10;mirror css changes">
+      <created>1610825148836</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610825148836</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +230,8 @@
     <MESSAGE value="Home page responsive completed" />
     <MESSAGE value="login and registration implemented&#10;returning deleted users yet to be implemented" />
     <MESSAGE value="fix back to sign in on forgot password" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix back to sign in on forgot password" />
+    <MESSAGE value="product page&#10;mirror css changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="product page&#10;mirror css changes" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

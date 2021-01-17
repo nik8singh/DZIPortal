@@ -217,6 +217,11 @@
         flex-direction: column-reverse;
     }
 
+    .column_one_img {
+        min-width: auto;
+        max-height: 400px;
+    }
+
 }
 
 

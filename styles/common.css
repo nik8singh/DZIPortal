@@ -50,7 +50,7 @@ a {
 #userMenu {
     display: flex;
     align-items: center;
-    line-height: 89px;
+    /*line-height: 89px;*/
     font-family: 'Poppins', sans-serif;
     flex-grow: 1;
 }
