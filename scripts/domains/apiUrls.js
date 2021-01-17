@@ -6,7 +6,7 @@ export default class ApiUrls {
     login_url = this.base_url + "secureLogin";
     auth_url = this.base_url + "auth/";
     gemstone_url = this.base_url + "gemstone/";
-    jt_url = this.base_url + "jt/";
+    jt_url = this.base_url + "jewelryType/";
     metal_url = this.base_url + "metal/";
     image_url = this.base_url + "image/";
     show_url = this.base_url + "shop/";
