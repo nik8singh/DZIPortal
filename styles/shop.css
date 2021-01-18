@@ -54,8 +54,15 @@
 }
 
 .filterOptions {
-    max-height: 160px;
     overflow: hidden;
+}
+
+.filterOptionsShort {
+    max-height: 100px;
+}
+
+.filterOptionsLong {
+    max-height: fit-content;
 }
 
 .seeFilter {
@@ -210,7 +217,6 @@
     word-wrap: break-word;
     font-weight: 500;
     font-size: 14px;
-    /*height: 40px;*/
     overflow: hidden;
     text-align: center;
 }

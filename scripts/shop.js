@@ -1,3 +1,9 @@
+$(document).ready(function () {
+
+
+});
+
+
 $(document).on("click", "#filterMenuButton", function (e) {
     closeOpenFilterMenu("100%", "50%", "10px", 'hidden', "block");
 });
@@ -21,10 +27,7 @@ function closeOpenFilterMenu(sideMenuBkWidth, sideMenuWidth, sideMenuPadding, bo
 }
 
 $(document).on("click", ".filterParent", function (e) {
-    closeOpenFilterMenuOptions($(this));
-});
-
-function closeOpenFilterMenuOptions(self) {
+    let self = $(this);
     let $filterOptionsSideMenu = self.find(".filterOptionsSideMenu");
     if ($filterOptionsSideMenu.is(":hidden")) {
         $filterOptionsSideMenu.show();
@@ -33,4 +36,16 @@ function closeOpenFilterMenuOptions(self) {
         $filterOptionsSideMenu.hide();
         self.find('i').removeClass("fa-minus").addClass("fa-plus");
     }
-}
+});
+
+$(document).on("click", ".seeFilter", function (e) {
+    let self = $(this);
+    let $filterOptions = self.parent().find(".filterOptions");
+    if ($filterOptions.hasClass("filterOptionsShort")) {
+        $filterOptions.removeClass("filterOptionsShort").addClass("filterOptionsLong");
+        self.html("<i class=\"fas fa-sort-up\"></i> See Less");
+    } else {
+        $filterOptions.removeClass("filterOptionsLong").addClass("filterOptionsShort");
+        self.html("<i class=\"fas fa-sort-down\"></i> See More");
+    }
+});

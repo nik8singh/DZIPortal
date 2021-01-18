@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4bd3918a-0777-40e4-b7d6-5cd37495a5d5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/domains/apiUrls.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/domains/apiUrls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/shopHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/shopHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/shop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shopHome.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopHome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/shop.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +95,7 @@
       <workItem from="1608523199924" duration="68003000" />
       <workItem from="1609114445553" duration="39708000" />
       <workItem from="1610342530944" duration="7256000" />
-      <workItem from="1610778520828" duration="25744000" />
+      <workItem from="1610778520828" duration="27730000" />
     </task>
     <task id="LOCAL-00001" summary="Home page responsive completed">
       <created>1608883235438</created>
@@ -147,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610870494618</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Shop home ajax call&#10;No images in category in backend">
+      <created>1610872689463</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1610872689463</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +263,8 @@
     <MESSAGE value="mirror css changes" />
     <MESSAGE value="ajax call and session handling" />
     <MESSAGE value="popular products ajax call" />
-    <option name="LAST_COMMIT_MESSAGE" value="popular products ajax call" />
+    <MESSAGE value="Shop home ajax call&#10;No images in category in backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shop home ajax call&#10;No images in category in backend" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
