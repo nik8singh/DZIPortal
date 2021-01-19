@@ -55,14 +55,13 @@
 
 .filterOptions {
     overflow: hidden;
-}
-
-.filterOptionsShort {
-    max-height: 100px;
-}
-
-.filterOptionsLong {
+    display: flex;
+    flex-direction: column;
     max-height: fit-content;
+}
+
+.filterOptions span {
+    color: #34495E;
 }
 
 .seeFilter {
@@ -116,11 +115,17 @@
     min-height: 300px;
     max-height: 380px;
     border: none;
-    margin: 5px;
+    margin: 20px;
     background: none;
     display: flex;
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
+}
+
+.shop_product_pane a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .category-list-panel {
@@ -204,7 +209,7 @@
 .shop_product_pane img {
     align-self: center;
     max-width: 150px;
-    max-height: 250px;
+    max-height: 200px;
 }
 
 .shop_product_pane > div {
@@ -219,6 +224,7 @@
     font-size: 14px;
     overflow: hidden;
     text-align: center;
+    margin-top: 5px;
 }
 
 .category_name {
@@ -244,9 +250,16 @@
 
 .product_buttons > a {
     margin-left: 20px;
-    font-size: 17px;
+    font-size: 15px;
     color: #212121;
+    flex-direction: row;
+    align-items: center;
 }
+
+.product_buttons > a > i {
+    margin-right: 2px;
+}
+
 
 .section_title {
     font-family: 'Poppins', sans-serif;
@@ -281,6 +294,36 @@
 #filterMenuPanel {
     display: none;
 }
+
+.filterOptionsSideMenu {
+    transition: 0.3s;
+    flex-direction: column;
+    justify-content: space-around;
+    display: none;
+    margin-top: 10px;
+}
+
+.sideMenuPanelHeader {
+    padding: 1px 10px;
+}
+
+.sideMenuPanelHeader:hover {
+    cursor: pointer;
+}
+
+.filterOptionsSideMenu label {
+    padding: 10px;
+}
+
+.filterOptionsSideMenu label:hover {
+    color: #009c9f !important;
+    cursor: pointer;
+}
+
+.filterOptionsSideMenu label:nth-child(odd) {
+    background-color: rgba(0, 208, 189, 0.1);
+}
+
 
 /* ---------------------------------------------------
     MEDIAQUERIES
@@ -344,8 +387,6 @@
     }
 
     .filterOptionsSideMenu {
-        display: none;
-        transition: 0.3s;
     }
 
     .sortLinks {

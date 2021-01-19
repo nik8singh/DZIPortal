@@ -1,16 +1,19 @@
 export default class ProductPanelGenerator {
 
-    generate(product) {
-        let mainImg = "assets/no-img.jpg";
-        $.each(product.images, function (index, img) {
+    getMainImage(images) {
+        $.each(images, function (index, img) {
             if (img.imagePriority === 1) {
-                mainImg = img.image_secure_url;
-                return false;
+                return img.image_secure_url;
             }
         });
-        return "<div class=\"product_pane\">" +
-            "     <a href=\"product.html\">" +
-            "        <img alt=\"product img\" src=\"" + mainImg + "\">" +
+        return "assets/no-img.jpg";
+    }
+
+    generate(product, shopPanel = false) {
+
+        return "<div class=\"" + (shopPanel ? 'shop_product_pane' : 'product_pane') + "\">" +
+            "     <a href=\"product.html?p=" + product.productId + "\">" +
+            "        <img alt=\"product img\" src=\"" + this.getMainImage(product.images) + "\">" +
             "        <div class=\"product_name\">" + product.productName +
             "        </div>" +
             "     </a>" +

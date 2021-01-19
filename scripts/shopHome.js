@@ -51,7 +51,3 @@ $(document).on("click", ".category_title", function (e) {
     }
 
 });
-
-function expandCollapse(self) {
-
-}

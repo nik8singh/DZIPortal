@@ -9,7 +9,6 @@ $(document).ready(function () {
 
 function getFeaturedProducts() {
 
-
     const ajaxCall = new AjaxCall(new ApiUrls().product_url + "vis/list/featured", 'GET');
     ajaxCall.makeCall(populatePopularProducts);
 }

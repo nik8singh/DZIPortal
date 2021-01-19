@@ -81,17 +81,16 @@ a.button1:hover, .submitBtn:hover {
 }
 
 .checkbox {
-    display: flex;
+    /*display: flex;*/
     cursor: pointer;
     align-items: center;
     vertical-align: middle;
-    margin-top: 5px;
+    /*margin-top: 10px;*/
     word-wrap: break-word;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
 }
 
 .checkbox > span {
-    color: #34495E;
     padding: 0 5px;
 
 }

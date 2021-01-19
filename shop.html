@@ -31,243 +31,83 @@
         <div style="height: 25px; display: flex; justify-content: flex-end">
             <a href="javascript:void(0)" id="filterMenuClose" style="font-size: 50px; color: black; margin-right: 5px">&times;</a>
         </div>
-        <h2 style="margin-bottom: 40px; color: #303030">Filter and Sort</h2>
+        <h2 style="color: #303030;">Filter and Sort</h2>
 
         <div class="sideMenuOptions">
-            <div class="sideMenuButtons" style="margin-bottom: 20px">
+            <div class="sideMenuButtons" style="margin-bottom: 30px">
                 <a class="button2">Clear all filters</a>
                 <a class="button4" style="width: 100px;">Apply</a>
             </div>
             <div class="filterParent">
-                <h3>Sort<i class="fas fa-plus moreFilter"></i></h3>
-                <div class="filterOptionsSideMenu">
-                    <div>
-                        <label class="checkbox">
-                            <input name="sort" type="radio"/>
-                            <span>Price: Low to High</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="checkbox">
-                            <input name="sort" type="radio"/>
-                            <span>Price: High to Low</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="checkbox">
-                            <input name="sort" type="radio"/>
-                            <span>Newest Arrivals</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="checkbox">
-                            <input name="sort" type="radio"/>
-                            <span>Relevance</span>
-                        </label>
-                    </div>
+                <h3 class="sideMenuPanelHeader">Sort<i class="fas fa-plus moreFilter"></i></h3>
+                <div class="filterOptionsSideMenu" hidden>
+
+                    <label class="checkbox">
+                        <input name="sort" type="radio"/>
+                        <span>Price: Low to High</span>
+                    </label>
+
+                    <label class="checkbox">
+                        <input name="sort" type="radio"/>
+                        <span>Price: High to Low</span>
+                    </label>
+
+                    <label class="checkbox">
+                        <input name="sort" type="radio"/>
+                        <span>Newest Arrivals</span>
+                    </label>
+
+                    <label class="checkbox">
+                        <input name="sort" type="radio"/>
+                        <span>Relevance</span>
+                    </label>
+
                 </div>
             </div>
             <div class="filterParent">
-                <h3>Price<i class="fas fa-plus moreFilter"></i></h3>
+                <h3 class="sideMenuPanelHeader">Price<i class="fas fa-plus moreFilter"></i></h3>
                 <div class="filterOptionsSideMenu">
-                    <div>
-                        <label class="checkbox">
-                            <input name="price" type="radio"/>
-                            <span>Under $25</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="checkbox">
-                            <input name="price" type="radio"/>
-                            <span>$25 to $50</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="checkbox">
-                            <input name="price" type="radio"/>
-                            <span>$50 to $100</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="checkbox">
-                            <input name="price" type="radio"/>
-                            <span>$100 to $200</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="checkbox">
-                            <input name="price" type="radio"/>
-                            <span>$200 & Above</span>
-                        </label>
-                    </div>
+
+                    <label class="checkbox">
+                        <input name="price" type="radio"/>
+                        <span>Under $25</span>
+                    </label>
+
+                    <label class="checkbox">
+                        <input name="price" type="radio"/>
+                        <span>$25 to $50</span>
+                    </label>
+
+                    <label class="checkbox">
+                        <input name="price" type="radio"/>
+                        <span>$50 to $100</span>
+                    </label>
+
+                    <label class="checkbox">
+                        <input name="price" type="radio"/>
+                        <span>$100 to $200</span>
+                    </label>
+
+                    <label class="checkbox">
+                        <input name="price" type="radio"/>
+                        <span>$200 & Above</span>
+                    </label>
+
                 </div>
             </div>
-            <div class="filterParent">
-                <h3>Jewelry Type <i class="fas fa-plus moreFilter"></i></h3>
-                <div class="filterOptionsSideMenu">
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
+            <div class="filterParent jewelryTypes">
+                <h3 class="sideMenuPanelHeader">Jewelry Type <i class="fas fa-plus moreFilter"></i></h3>
+                <div class="filterOptionsSideMenu ">
                 </div>
             </div>
-            <div class="filterParent">
-                <h3>Stone Type <i class="fas fa-plus moreFilter"></i></h3>
+            <div class="filterParent gemstones">
+                <h3 class="sideMenuPanelHeader">Stone Type <i class="fas fa-plus moreFilter"></i></h3>
                 <div class="filterOptionsSideMenu">
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
                 </div>
             </div>
-            <div class="filterParent">
-                <h3>Metal Type <i class="fas fa-plus moreFilter"></i></h3>
+            <div class="filterParent metalsDtos">
+                <h3 class="sideMenuPanelHeader">Metal Type <i class="fas fa-plus moreFilter"></i></h3>
                 <div class="filterOptionsSideMenu">
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
-
-                    <div>
-                        <label class="checkbox">
-                            <input type="checkbox"/>
-                            <span>Necklace</span>
-                        </label>
-                    </div>
                 </div>
             </div>
 
@@ -299,174 +139,20 @@
         </div>
         <div class="product-list-container">
             <div class="filter-panel">
-                <div class="filterParent">
+                <div class="filterParent jewelryTypes">
                     <h3>Jewelry Type</h3>
-                    <div class="filterOptions filterOptionsShort">
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-                    </div>
+                    <div class="filterOptions filterOptionsShort"></div>
                     <a class="seeFilter moreFilter"><i class="fas fa-sort-down"></i> See More</a>
                 </div>
-                <div class="filterParent">
+                <div class="filterParent gemstones">
                     <h3>Stone Type</h3>
                     <div class="filterOptions filterOptionsShort">
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
                     </div>
                     <a class="seeFilter moreFilter"><i class="fas fa-sort-down"></i> See More</a>
                 </div>
-                <div class="filterParent">
+                <div class="filterParent metalsDtos">
                     <h3>Metal Type</h3>
                     <div class="filterOptions filterOptionsShort">
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
-
-                        <div>
-                            <label class="checkbox">
-                                <input type="checkbox"/>
-                                <span>Necklace</span>
-                            </label>
-                        </div>
                     </div>
                     <a class="seeFilter moreFilter"><i class="fas fa-sort-down"></i> See More</a>
                 </div>
@@ -511,208 +197,9 @@
                         </div>
                         <div class="product_buttons">
                             <a class="add_wishlist" href="#" title="Add to wishlist"><i class="far fa-heart"></i></a>
-                            <!-- <a class="add_bag" href="#" title="Add to Shopping Bag"><i class="fas fa-shopping-bag"></i></a>-->
                         </div>
                     </div>
-                    <div class="product_rating">
-                        <i class="fas fa-star" style="color: goldenrod"></i>
-                        <i class="fas fa-star" style="color: goldenrod"></i>
-                        <i class="fas fa-star-half-alt" style="color: goldenrod"></i>
-                        <i class="fas fa-star" style="color: #d4d4d4"></i>
-                        <i class="fas fa-star" style="color: #d4d4d4"></i>
-                    </div>
-                </div>
-                <div class="shop_product_pane">
-                    <a href="product.html">
-                        <img alt="product img" src="assets/prod2.jpg">
-                        <div class="product_name">
-                            Jack Gold Small Statement Earrings In Multi Crystal sad saf dfds
-                        </div>
-                    </a>
-                    <div class="product_action">
-                        <div>
-                            <span class="price">$200.00</span>
-                        </div>
-                        <div class="product_buttons">
-                            <a class="add_wishlist" href="#" title="Add to wishlist"><i class="far fa-heart"></i></a>
-                            <!-- <a class="add_bag" href="#" title="Add to Shopping Bag"><i class="fas fa-shopping-bag"></i></a>-->
-                        </div>
-                    </div>
-                    <div class="product_rating">
-                        <i class="fas fa-star" style="color: goldenrod"></i>
-                        <i class="fas fa-star" style="color: goldenrod"></i>
-                        <i class="fas fa-star-half-alt" style="color: goldenrod"></i>
-                        <i class="fas fa-star" style="color: #d4d4d4"></i>
-                        <i class="fas fa-star" style="color: #d4d4d4"></i>
-                    </div>
-                </div>
-                <div class="shop_product_pane">
-                    <a href="product.html">
-                        <img alt="product img" src="assets/prod2.jpg">
-                        <div class="product_name">
-                            Jack Gold Small Statement Earrings In Multi Crystal sad saf dfds
-                        </div>
-                    </a>
-                    <div class="product_action">
-                        <div>
-                            <span class="price">$200.00</span>
-                        </div>
-                        <div class="product_buttons">
-                            <a class="add_wishlist" href="#" title="Add to wishlist"><i class="far fa-heart"></i></a>
-                            <!-- <a class="add_bag" href="#" title="Add to Shopping Bag"><i class="fas fa-shopping-bag"></i></a>-->
-                        </div>
-                    </div>
-                    <div class="product_rating">
-                        <i class="fas fa-star" style="color: goldenrod"></i>
-                        <i class="fas fa-star" style="color: goldenrod"></i>
-                        <i class="fas fa-star-half-alt" style="color: goldenrod"></i>
-                        <i class="fas fa-star" style="color: #d4d4d4"></i>
-                        <i class="fas fa-star" style="color: #d4d4d4"></i>
-                    </div>
-                </div>
-                <div class="shop_product_pane">
-                    <a href="product.html">
-                        <img alt="product img" src="assets/prod2.jpg">
-                        <div class="product_name">
-                            Jack Gold Small Statement Earrings In Multi Crystal sad saf dfds
-                        </div>
-                    </a>
-                    <div class="product_action">
-                        <div>
-                            <span class="price">$200.00</span>
-                        </div>
-                        <div class="product_buttons">
-                            <a class="add_wishlist" href="#" title="Add to wishlist"><i class="far fa-heart"></i></a>
-                            <!-- <a class="add_bag" href="#" title="Add to Shopping Bag"><i class="fas fa-shopping-bag"></i></a>-->
-                        </div>
-                    </div>
-                    <div class="product_rating">
-                        <i class="fas fa-star" style="color: goldenrod"></i>
-                        <i class="fas fa-star" style="color: goldenrod"></i>
-                        <i class="fas fa-star-half-alt" style="color: goldenrod"></i>
-                        <i class="fas fa-star" style="color: #d4d4d4"></i>
-                        <i class="fas fa-star" style="color: #d4d4d4"></i>
-                    </div>
-                </div>
-                <div class="shop_product_pane">
-                    <a href="product.html">
-                        <img alt="product img" src="assets/prod2.jpg">
-                        <div class="product_name">
-                            Jack Gold Small Statement Earrings In Multi Crystal sad saf dfds
-                        </div>
-                    </a>
-                    <div class="product_action">
-                        <div>
-                            <span class="price">$200.00</span>
-                        </div>
-                        <div class="product_buttons">
-                            <a class="add_wishlist" href="#" title="Add to wishlist"><i class="far fa-heart"></i></a>
-                            <!-- <a class="add_bag" href="#" title="Add to Shopping Bag"><i class="fas fa-shopping-bag"></i></a>-->
-                        </div>
-                    </div>
-                    <div class="product_rating">
-                        <i class="fas fa-star" style="color: goldenrod"></i>
-                        <i class="fas fa-star" style="color: goldenrod"></i>
-                        <i class="fas fa-star-half-alt" style="color: goldenrod"></i>
-                        <i class="fas fa-star" style="color: #d4d4d4"></i>
-                        <i class="fas fa-star" style="color: #d4d4d4"></i>
-                    </div>
-                </div>
-                <div class="shop_product_pane">
-                    <a href="product.html">
-                        <img alt="product img" src="assets/prod2.jpg">
-                        <div class="product_name">
-                            Jack Gold Small Statement Earrings In Multi Crystal sad saf dfds
-                        </div>
-                    </a>
-                    <div class="product_action">
-                        <div>
-                            <span class="price">$200.00</span>
-                        </div>
-                        <div class="product_buttons">
-                            <a class="add_wishlist" href="#" title="Add to wishlist"><i class="far fa-heart"></i></a>
-                            <!-- <a class="add_bag" href="#" title="Add to Shopping Bag"><i class="fas fa-shopping-bag"></i></a>-->
-                        </div>
-                    </div>
-                    <div class="product_rating">
-                        <i class="fas fa-star" style="color: goldenrod"></i>
-                        <i class="fas fa-star" style="color: goldenrod"></i>
-                        <i class="fas fa-star-half-alt" style="color: goldenrod"></i>
-                        <i class="fas fa-star" style="color: #d4d4d4"></i>
-                        <i class="fas fa-star" style="color: #d4d4d4"></i>
-                    </div>
-                </div>
-                <div class="shop_product_pane">
-                    <a href="product.html">
-                        <img alt="product img" src="assets/prod2.jpg">
-                        <div class="product_name">
-                            Jack Gold Small Statement Earrings In Multi Crystal sad saf dfds
-                        </div>
-                    </a>
-                    <div class="product_action">
-                        <div>
-                            <span class="price">$200.00</span>
-                        </div>
-                        <div class="product_buttons">
-                            <a class="add_wishlist" href="#" title="Add to wishlist"><i class="far fa-heart"></i></a>
-                            <!-- <a class="add_bag" href="#" title="Add to Shopping Bag"><i class="fas fa-shopping-bag"></i></a>-->
-                        </div>
-                    </div>
-                    <div class="product_rating">
-                        <i class="fas fa-star" style="color: goldenrod"></i>
-                        <i class="fas fa-star" style="color: goldenrod"></i>
-                        <i class="fas fa-star-half-alt" style="color: goldenrod"></i>
-                        <i class="fas fa-star" style="color: #d4d4d4"></i>
-                        <i class="fas fa-star" style="color: #d4d4d4"></i>
-                    </div>
-                </div>
-                <div class="shop_product_pane">
-                    <a href="product.html">
-                        <img alt="product img" src="assets/prod2.jpg">
-                        <div class="product_name">
-                            Jack Gold Small Statement Earrings In Multi Crystal sad saf dfds
-                        </div>
-                    </a>
-                    <div class="product_action">
-                        <div>
-                            <span class="price">$200.00</span>
-                        </div>
-                        <div class="product_buttons">
-                            <a class="add_wishlist" href="#" title="Add to wishlist"><i class="far fa-heart"></i></a>
-                            <!-- <a class="add_bag" href="#" title="Add to Shopping Bag"><i class="fas fa-shopping-bag"></i></a>-->
-                        </div>
-                    </div>
-                    <div class="product_rating">
-                        <i class="fas fa-star" style="color: goldenrod"></i>
-                        <i class="fas fa-star" style="color: goldenrod"></i>
-                        <i class="fas fa-star-half-alt" style="color: goldenrod"></i>
-                        <i class="fas fa-star" style="color: #d4d4d4"></i>
-                        <i class="fas fa-star" style="color: #d4d4d4"></i>
-                    </div>
-                </div>
-                <div class="shop_product_pane">
-                    <a href="product.html">
-                        <img alt="product img" src="assets/prod2.jpg">
-                        <div class="product_name">
-                            Jack Gold Small Statement Earrings In Multi Crystal sad saf dfds
-                        </div>
-                    </a>
-                    <div class="product_action">
-                        <div>
-                            <span class="price">$200.00</span>
-                        </div>
-                        <div class="product_buttons">
-                            <a class="add_wishlist" href="#" title="Add to wishlist"><i class="far fa-heart"></i></a>
-                            <!-- <a class="add_bag" href="#" title="Add to Shopping Bag"><i class="fas fa-shopping-bag"></i></a>-->
-                        </div>
-                    </div>
-                    <div class="product_rating">
-                        <i class="fas fa-star" style="color: goldenrod"></i>
-                        <i class="fas fa-star" style="color: goldenrod"></i>
-                        <i class="fas fa-star-half-alt" style="color: goldenrod"></i>
-                        <i class="fas fa-star" style="color: #d4d4d4"></i>
-                        <i class="fas fa-star" style="color: #d4d4d4"></i>
-                    </div>
+
                 </div>
 
             </div>
