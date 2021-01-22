@@ -9,8 +9,9 @@ export default class AjaxCall {
         this.processData = processData;
     }
 
-    makeCall(callback) {
-
+    makeCall(callback, completedCallback) {
+        console.log(this.url)
+        console.log(this.data)
         $.ajax({
             url: this.url,
             type: this.type,
@@ -25,13 +26,12 @@ export default class AjaxCall {
             error: function (requestObject, error, errorThrown) {
 
                 if (~requestObject.responseText.indexOf("JWTAuthorizationFilter") || errorThrown === "Forbidden")
-                    window.location.replace("../../errors/403.html");
+                    window.location.replace("../errors/403.html");
+
+                console.log(requestObject.responseText, error, errorThrown)
 
             },
-            complete: function () {
-
-            }
-
+            complete: completedCallback
         });
     }
 }

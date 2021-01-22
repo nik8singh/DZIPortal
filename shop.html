@@ -31,16 +31,39 @@
         <div style="height: 25px; display: flex; justify-content: flex-end">
             <a href="javascript:void(0)" id="filterMenuClose" style="font-size: 50px; color: black; margin-right: 5px">&times;</a>
         </div>
-        <h2 style="color: #303030;">Filter and Sort</h2>
+        <h2 style="color: #303030;">DZI Creations Jewelry Shop - Filter and Sort</h2>
 
         <div class="sideMenuOptions">
             <div class="sideMenuButtons" style="margin-bottom: 30px">
                 <a class="button2">Clear all filters</a>
                 <a class="button4" style="width: 100px;">Apply</a>
             </div>
-            <div class="filterParent">
+            <div class="filterParent sorts">
                 <h3 class="sideMenuPanelHeader">Sort<i class="fas fa-plus moreFilter"></i></h3>
-                <div class="filterOptionsSideMenu" hidden>
+                <div class="filterOptionsSideMenu filterDivBoth" hidden>
+
+                    <label class="checkbox">
+                        <input name="sort" type="radio"/>
+                        <span>Price: Low to High</span>
+                    </label>
+
+                    <label class="checkbox">
+                        <input name="sort" type="radio"/>
+                        <span>Price: High to Low</span>
+                    </label>
+
+                    <label class="checkbox">
+                        <input name="sort" type="radio"/>
+                        <span>Newest Arrivals</span>
+                    </label>
+
+                    <label class="checkbox">
+                        <input name="sort" type="radio"/>
+                        <span>Relevance</span>
+                    </label>
+
+                </div>
+                <div class="filterOptionsSideMenu filterDivBoth" hidden>
 
                     <label class="checkbox">
                         <input name="sort" type="radio"/>
@@ -64,9 +87,9 @@
 
                 </div>
             </div>
-            <div class="filterParent">
+            <div class="filterParent prices">
                 <h3 class="sideMenuPanelHeader">Price<i class="fas fa-plus moreFilter"></i></h3>
-                <div class="filterOptionsSideMenu">
+                <div class="filterOptionsSideMenu filterDivBoth">
 
                     <label class="checkbox">
                         <input name="price" type="radio"/>
@@ -93,24 +116,27 @@
                         <span>$200 & Above</span>
                     </label>
 
+                    <label class="checkbox">
+                        <input name="price" type="radio"/>
+                    </label>
+
                 </div>
             </div>
             <div class="filterParent jewelryTypes">
                 <h3 class="sideMenuPanelHeader">Jewelry Type <i class="fas fa-plus moreFilter"></i></h3>
-                <div class="filterOptionsSideMenu ">
+                <div class="filterOptionsSideMenu filterDivBoth ">
                 </div>
             </div>
             <div class="filterParent gemstones">
                 <h3 class="sideMenuPanelHeader">Stone Type <i class="fas fa-plus moreFilter"></i></h3>
-                <div class="filterOptionsSideMenu">
+                <div class="filterOptionsSideMenu filterDivBoth">
                 </div>
             </div>
             <div class="filterParent metalsDtos">
                 <h3 class="sideMenuPanelHeader">Metal Type <i class="fas fa-plus moreFilter"></i></h3>
-                <div class="filterOptionsSideMenu">
+                <div class="filterOptionsSideMenu filterDivBoth">
                 </div>
             </div>
-
         </div>
 
     </div>
@@ -120,15 +146,18 @@
     <div class="body_container">
         <div class="top-panel" id="topPanel">
             <div>
-                <span class="totalNumberOfItems">34</span> results for "<span class="searchedWords">ruby rings</span>"
+                <span class="totalNumberOfItems"></span>
             </div>
-            <div class="dropdown sortDP">
-                <a> Sort by: <span class="currentSort">Featured</span> <i class="fas fa-sort-down"></i></a>
-                <div class="dropdown-content">
-                    <a>Price: Low to High</a>
-                    <a>Price: High to Low</a>
-                    <a>Newest Arrivals</a>
-                    <a>Featured</a>
+            <h2>DZI Creations Jewelry Shop</h2>
+            <div style="min-width: 230px">
+                <div class="dropdown sortDP">
+                    <a> Sort - <span class="currentSort">Featured</span> <i class="fas fa-sort-down"></i></a>
+                    <div class="dropdown-content">
+                        <a class="pricelowToHigh">Price: Low to High</a>
+                        <a class="priceHighToLow">Price: High to Low</a>
+                        <a class="newest">Newest Arrivals</a>
+                        <a class="relevance">Relevance</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -139,31 +168,46 @@
         </div>
         <div class="product-list-container">
             <div class="filter-panel">
+                <h3 class="filterTitle">Filters</h3>
                 <div class="filterParent jewelryTypes">
                     <h3>Jewelry Type</h3>
-                    <div class="filterOptions filterOptionsShort"></div>
+                    <div class="filterOptions filterDivBoth filterOptionsShort"></div>
                     <a class="seeFilter moreFilter"><i class="fas fa-sort-down"></i> See More</a>
                 </div>
-                <div class="filterParent gemstones">
-                    <h3>Stone Type</h3>
-                    <div class="filterOptions filterOptionsShort">
+                <div class="stoneMetalCombo">
+                    <div class="searchType">
+                        <h3>Stone Metal Combo</h3>
+                        <label class="checkbox">
+                            <input name="exactOrContains" type="radio"/>
+                            <span>Exact Match</span>
+                        </label>
+
+                        <label class="checkbox">
+                            <input checked name="exactOrContains" type="radio"/>
+                            <span>Contains</span>
+                        </label>
                     </div>
-                    <a class="seeFilter moreFilter"><i class="fas fa-sort-down"></i> See More</a>
-                </div>
-                <div class="filterParent metalsDtos">
-                    <h3>Metal Type</h3>
-                    <div class="filterOptions filterOptionsShort">
+                    <div class="filterParent gemstones">
+                        <h3>Stone Type</h3>
+                        <div class="filterOptions filterDivBoth filterOptionsShort">
+                        </div>
+                        <a class="seeFilter moreFilter"><i class="fas fa-sort-down"></i> See More</a>
                     </div>
-                    <a class="seeFilter moreFilter"><i class="fas fa-sort-down"></i> See More</a>
+                    <div class="filterParent metalsDtos">
+                        <h3>Metal Type</h3>
+                        <div class="filterOptions filterDivBoth filterOptionsShort">
+                        </div>
+                        <a class="seeFilter moreFilter"><i class="fas fa-sort-down"></i> See More</a>
+                    </div>
                 </div>
-                <div class="filterParent">
+                <div class="filterParent priceType">
                     <h3>Price</h3>
-                    <div class="filterOptions filterLinks">
-                        <div><a>Under $25</a></div>
-                        <div><a>$25 to $50</a></div>
-                        <div><a>$50 to $100</a></div>
-                        <div><a>$100 to $200</a></div>
-                        <div><a>$200 & Above</a></div>
+                    <div class="filterOptions filterDivBoth filterLinks">
+                        <a>Under $25</a>
+                        <a>$25 to $50</a>
+                        <a>$50 to $100</a>
+                        <a>$100 to $200</a>
+                        <a>$200 & Above</a>
                         <div class="priceCustom">
 
                             <div class="priceInput lowInput">
@@ -176,32 +220,14 @@
                                 <input class="high-price" id="high-price" maxlength="9" placeholder="Max" type="text">
                             </div>
 
-                            <button class="button3">Go</button>
-
+                            <button class="button3 customPriceRange">Go</button>
                         </div>
+                        <span class="customPriceError" hidden style="color: darkred;">Min cannot be more than max</span>
                     </div>
                 </div>
             </div>
 
             <div class="product-list-panel">
-                <div class="shop_product_pane">
-                    <a href="product.html">
-                        <img alt="product img" src="assets/prod2.jpg">
-                        <div class="product_name">
-                            Jack Gold Small Statement Earrings In Multi Crystal sad saf dfds
-                        </div>
-                    </a>
-                    <div class="product_action">
-                        <div>
-                            <span class="price">$200.00</span>
-                        </div>
-                        <div class="product_buttons">
-                            <a class="add_wishlist" href="#" title="Add to wishlist"><i class="far fa-heart"></i></a>
-                        </div>
-                    </div>
-
-                </div>
-
             </div>
         </div>
     </div>

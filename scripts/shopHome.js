@@ -2,11 +2,11 @@ import AjaxCall from "./utils/ajaxCall.js";
 import ApiUrls from "./domains/apiUrls.js";
 
 $(document).ready(function () {
-    let ajaxCall = new AjaxCall(new ApiUrls().gemstone_url + "vis/list/active/-1", 'GET');
+    let ajaxCall = new AjaxCall(new ApiUrls().gemstone_url + "vis/list/active/-1", 'GET', 'json');
     ajaxCall.makeCall(populate);
-    ajaxCall = new AjaxCall(new ApiUrls().jt_url + "vis/list/active/-1", 'GET');
+    ajaxCall = new AjaxCall(new ApiUrls().jt_url + "vis/list/active/-1", 'GET', 'json');
     ajaxCall.makeCall(populate);
-    ajaxCall = new AjaxCall(new ApiUrls().metal_url + "vis/list/active/-1", 'GET');
+    ajaxCall = new AjaxCall(new ApiUrls().metal_url + "vis/list/active/-1", 'GET', 'json');
     ajaxCall.makeCall(populate);
 
 });
@@ -14,20 +14,29 @@ $(document).ready(function () {
 function populate(data) {
     console.log(data);
     let $categoryTypeClass = $(".list_jt");
-    let nameVar = "jewelryTypeName";
+    let nameVar, s, t;
     if (data.hasOwnProperty('gemstones')) {
         $categoryTypeClass = $(".list_stone");
         nameVar = "gemstoneName";
+        t = "st";
+        s = "gemstoneName";
     } else if (data.hasOwnProperty('metalsDtos')) {
         $categoryTypeClass = $(".list_metal");
         nameVar = "metalName";
+        t = "mt";
+        s = "metalName";
+    } else {
+        nameVar = "jewelryTypeName";
+        t = "jt";
+        s = "jewelryTypeId";
     }
 
     $.each(data, function (index, elementParent) {
         if ($.isArray(elementParent)) {
             $.each(elementParent, function (index, element) {
+
                 $categoryTypeClass.append(" <div class=\"category_pane shop_product_pane \">" +
-                    "                    <a href=\"shop.html\">" +
+                    "                    <a href=\"shop.html?s=" + element[s] + "&t=" + t + "\">" +
                     "                        <img alt=\"product img\" src=\"assets/prod2.jpg\">" +
                     "                        <div class=\"category_name product_name\">" + element[nameVar] +
                     "                        </div>" +

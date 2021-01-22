@@ -14,6 +14,11 @@
     justify-content: space-between;
 }
 
+.top-panel h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
 .sortDP {
     padding: 8px 10px;
     text-align: center;
@@ -42,11 +47,20 @@
 .filter-panel {
     order: 1;
     width: 100%;
-    max-width: 150px;
+    max-width: 170px;
     border-right: 2px solid #ddd;
-    padding: 10px;
-    margin: 10px;
+    padding: 0 10px 10px 0;
+    margin: 0 10px 10px 0;
     font-size: 14px;
+
+}
+
+.filterTitle {
+    text-align: center;
+    font-size: 17px;
+    border-bottom: rgba(27, 27, 27, 0.2) 1px solid;
+    margin-bottom: 20px !important;
+    padding-bottom: 10px;
 }
 
 .filter-panel H3 {
@@ -64,6 +78,10 @@
     color: #34495E;
 }
 
+.filterOptions .checkbox {
+    margin: 2px 0;
+}
+
 .seeFilter {
     font-size: 14px;
     color: #003ad7;
@@ -71,13 +89,16 @@
 }
 
 .filterParent {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
 }
 
 .priceCustom {
     display: flex;
     flex-direction: row;
     max-width: 100%;
+    padding: 4px;
 }
 
 .priceCustom input {
@@ -106,15 +127,14 @@
     justify-content: start;
     flex-wrap: wrap;
     align-content: flex-start;
-
 }
 
 
 .shop_product_pane {
-    width: 210px;
+    width: 250px;
     min-height: 300px;
     max-height: 380px;
-    border: none;
+    border-bottom: rgba(27, 27, 27, 0.2) 1px solid;
     margin: 20px;
     background: none;
     display: flex;
@@ -208,8 +228,9 @@
 
 .shop_product_pane img {
     align-self: center;
-    max-width: 150px;
-    max-height: 200px;
+    width: 100%;
+    max-width: 200px;
+    max-height: 250px;
 }
 
 .shop_product_pane > div {
@@ -245,7 +266,11 @@
 }
 
 .price {
-    color: #212121;
+    color: #8d0202;
+}
+
+.add_wishlist {
+    color: #397701 !important;
 }
 
 .product_buttons > a {
@@ -324,6 +349,61 @@
     background-color: rgba(0, 208, 189, 0.1);
 }
 
+.noMatchFoundMessage {
+    color: darkred;
+}
+
+.noMatchFoundMessage a {
+    color: darkblue !important;
+    text-decoration: underline;
+}
+
+.noMatchFoundMessage ul {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.stoneMetalCombo {
+    border: rgba(66, 219, 202, 0.4) 2px solid;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 10px
+}
+
+.searchType {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 6px;
+    color: black;
+    background-color: rgba(108, 221, 190, 0.2);
+}
+
+.gemstones, .metalsDtos {
+    background-color: rgba(220, 241, 241, 0.1);
+}
+
+.gemstones {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.metalsDtos {
+
+    margin-bottom: 0;
+}
+
+.filterLinks a {
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+
+.activePrice {
+    background-color: rgba(0, 255, 237, 0.3) !important;
+    border-bottom: rgb(1, 110, 110) 1px solid;
+
+
+}
 
 /* ---------------------------------------------------
     MEDIAQUERIES

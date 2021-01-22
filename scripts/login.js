@@ -105,7 +105,7 @@ $("#login").on("submit", function (event) {
                     console.log(exception);
                 }, complete: function () {
                     $("#loading").remove();
-                    window.location.replace("index.errors");
+                    window.location.replace("index.html");
                 }
             });
 

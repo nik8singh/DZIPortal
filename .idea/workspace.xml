@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bd3918a-0777-40e4-b7d6-5cd37495a5d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/utils/commonFunctions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customize.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/shop.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/shopHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/shopHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/utils/ajaxCall.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/utils/ajaxCall.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/utils/productPanelGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/utils/productPanelGenerator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopHome.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopHome.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/myfields.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/myfields.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/shop.css" afterDir="false" />
     </list>
@@ -56,7 +56,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -66,9 +66,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\DZIPortal" />
       <recent name="D:\xampp\htdocs\DZIPortal\assets" />
       <recent name="D:\xampp\htdocs\DZIPortal\errors" />
-      <recent name="D:\xampp\htdocs\DZIPortal" />
       <recent name="D:\xampp\htdocs\DZIPortal\assests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -101,7 +101,7 @@
       <workItem from="1609114445553" duration="39708000" />
       <workItem from="1610342530944" duration="7256000" />
       <workItem from="1610778520828" duration="30588000" />
-      <workItem from="1610959348849" duration="16455000" />
+      <workItem from="1610959348849" duration="55715000" />
     </task>
     <task id="LOCAL-00001" summary="Home page responsive completed">
       <created>1608883235438</created>
@@ -166,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610932086040</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="shop filter fixes">
+      <created>1611024861489</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1611024861489</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +285,8 @@
     <MESSAGE value="popular products ajax call" />
     <MESSAGE value="Shop home ajax call&#10;No images in category in backend" />
     <MESSAGE value="shop filter see more/see less" />
-    <option name="LAST_COMMIT_MESSAGE" value="shop filter see more/see less" />
+    <MESSAGE value="shop filter fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="shop filter fixes" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
