@@ -72,7 +72,7 @@ function filtersCompleted() {
         callToPopulate();//(decodeURI(parameterFromURL("s")), parameterFromURL("t"));
 }
 
-function callToPopulate(sortValue) {
+function callToPopulate(sortValue = "relevance") {
 
     let ajaxCall, data = createFilterJSON(sortValue);
     let url = new ApiUrls().product_url + "vis/list/shopFilter/1";
@@ -94,7 +94,6 @@ function ajaxCallCompleted() {
 }
 
 function populate(data) {
-    console.log(data)
     const productHtmlGenerator = new ProductPanelGenerator();
     let $popularProductColumn = $(".product-list-panel");
     $popularProductColumn.empty();
@@ -186,7 +185,7 @@ function whichFilterPanelIsUsed() {
 $(document).on("click", ".dropdown-content a", function (e) {
     let self = $(this);
     $(".currentSort").text((self.text()));
-    callToPopulate(0, -1, self.attr('class'));
+    callToPopulate(self.attr('class'));
 });
 
 $(document).on("click", ".priceType a", function (e) {
@@ -211,14 +210,15 @@ $(document).on("click", ".customPriceRange", function (e) {
         self.parent().addClass("activePrice");
         callToPopulate();
     }
-
-
 });
 
+$(document).on("click", ".searchType :radio", function () {
+    console.log("radio button")
+    callToPopulate();
+});
 
-function createFilterJSON(sortValue = "relevance") {
+function createFilterJSON(sortValue) {
     let item = {}, jts = [], gems = [], mets = [];
-    let headerJt = null, headerGM = null, headerMT = null;
     let checkedBoxes = $(whichFilterPanelIsUsed()).find(":checkbox:checked");
 
     checkedBoxes.each(function () {
@@ -229,32 +229,15 @@ function createFilterJSON(sortValue = "relevance") {
             let materialItem = {};
             materialItem["metalName"] = filterValue;
             mets.push(materialItem);
-
-            if (headerMT === null)
-                headerMT = $(this).text();
-            else if (headerMT.contains(" and "))
-                headerMT = "many metal bases"
-            else headerMT += " and " + $(this).text();
-
         } else if ($filterParentDiv.hasClass("gemstones")) {
             let materialItem = {};
             materialItem["gemstoneName"] = filterValue;
             gems.push(materialItem);
 
-            if (headerGM === null)
-                headerGM = $(this).text();
-            else if (headerGM.contains(" and "))
-                headerGM = "many stones"
-            else headerGM += " and " + $(this).text();
-
         } else if ($filterParentDiv.hasClass("jewelryTypes")) {
             let materialItem = {};
             materialItem["jewelryTypeId"] = filterValue;
             jts.push(materialItem);
-            if (headerJt === null)
-                headerJt = $(this).text();
-            else
-                headerJt = "Jewelry"
         }
 
     });
@@ -295,6 +278,8 @@ function createFilterJSON(sortValue = "relevance") {
     }
     item['min'] = min;
     item['max'] = max;
+    item['exactGT'] = $(whichFilterPanelIsUsed() + " .gemstones").find(":radio:checked").val();
+    item['exactMT'] = $(whichFilterPanelIsUsed() + " .metalsDtos").find(":radio:checked").val();
 
     return JSON.stringify(item);
 

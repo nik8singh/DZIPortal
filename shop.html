@@ -149,7 +149,7 @@
                 <span class="totalNumberOfItems"></span>
             </div>
             <h2>DZI Creations Jewelry Shop</h2>
-            <div style="min-width: 230px">
+            <div style="min-width: 230px; text-align: center">
                 <div class="dropdown sortDP">
                     <a> Sort - <span class="currentSort">Featured</span> <i class="fas fa-sort-down"></i></a>
                     <div class="dropdown-content">
@@ -168,38 +168,50 @@
         </div>
         <div class="product-list-container">
             <div class="filter-panel">
-                <h3 class="filterTitle">Filters</h3>
+                <!--                <h3 class="filterTitle">Filters</h3>-->
                 <div class="filterParent jewelryTypes">
                     <h3>Jewelry Type</h3>
                     <div class="filterOptions filterDivBoth filterOptionsShort"></div>
                     <a class="seeFilter moreFilter"><i class="fas fa-sort-down"></i> See More</a>
                 </div>
-                <div class="stoneMetalCombo">
+
+                <div class="filterParent gemstones">
+                    <h3>Stone Type</h3>
                     <div class="searchType">
-                        <h3>Stone Metal Combo</h3>
                         <label class="checkbox">
-                            <input name="exactOrContains" type="radio"/>
-                            <span>Exact Match</span>
+                            <input name="exactOrContainsGT" type="radio" value="true"/>
+                            <span> Exact match - Selected only</span>
                         </label>
 
                         <label class="checkbox">
-                            <input checked name="exactOrContains" type="radio"/>
-                            <span>Contains</span>
+                            <input checked name="exactOrContainsGT" type="radio" value="false"/>
+                            <span> At least selected</span>
                         </label>
                     </div>
-                    <div class="filterParent gemstones">
-                        <h3>Stone Type</h3>
-                        <div class="filterOptions filterDivBoth filterOptionsShort">
-                        </div>
-                        <a class="seeFilter moreFilter"><i class="fas fa-sort-down"></i> See More</a>
+                    <div class="filterOptions filterDivBoth filterOptionsShort">
                     </div>
-                    <div class="filterParent metalsDtos">
-                        <h3>Metal Type</h3>
-                        <div class="filterOptions filterDivBoth filterOptionsShort">
-                        </div>
-                        <a class="seeFilter moreFilter"><i class="fas fa-sort-down"></i> See More</a>
-                    </div>
+                    <a class="seeFilter moreFilter"><i class="fas fa-sort-down"></i> See More</a>
                 </div>
+
+                <div class="filterParent metalsDtos">
+                    <h3>Metal Type</h3>
+                    <div class="searchType">
+                        <label class="checkbox">
+                            <input name="exactOrContainsMT" type="radio" value="true"/>
+                            <span>Exact match - Selected only</span>
+                        </label>
+
+                        <label class="checkbox">
+                            <input checked name="exactOrContainsMT" type="radio" value="false"/>
+                            <span> At least selected</span>
+                        </label>
+                    </div>
+                    <div class="filterOptions filterDivBoth filterOptionsShort">
+                    </div>
+
+                    <a class="seeFilter moreFilter"><i class="fas fa-sort-down"></i> See More</a>
+                </div>
+
                 <div class="filterParent priceType">
                     <h3>Price</h3>
                     <div class="filterOptions filterDivBoth filterLinks">

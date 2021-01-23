@@ -12,7 +12,6 @@ export default class ProductPanelGenerator {
     }
 
     generate(product, shopPanel = false) {
-        console.log(product)
         return "<div class=\"" + (shopPanel ? 'shop_product_pane' : 'product_pane') + "\">" +
             "     <a href=\"product.html?p=" + product.productId + "\">" +
             "        <img alt=\"product img\" src=\"" + (shopPanel ? product.image_secure_url : this.getMainImage(product.images)) + "\">" +

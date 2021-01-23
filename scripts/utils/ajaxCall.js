@@ -10,8 +10,6 @@ export default class AjaxCall {
     }
 
     makeCall(callback, completedCallback) {
-        console.log(this.url)
-        console.log(this.data)
         $.ajax({
             url: this.url,
             type: this.type,
