@@ -56,15 +56,15 @@
 }
 
 .product-price {
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 500;
     color: rgba(3, 126, 129, 1);
 }
 
 .product-price span {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
-    font-style: italic;
+    /*font-style: italic;*/
     color: darkred;
 }
 
@@ -102,6 +102,10 @@
     margin-top: 10px;
 }
 
+.product-properties div {
+    margin-bottom: 10px;
+}
+
 .quantityDP {
     padding: 10px 15px;
     border: #303030 1px solid;
@@ -111,6 +115,10 @@
     min-width: 50px;
     text-align: center;
     left: -1px;
+}
+
+.flex_wrapped_column {
+    margin-bottom: 100px;
 }
 
 /* ---------------------------------------------------

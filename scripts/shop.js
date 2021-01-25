@@ -50,6 +50,7 @@ function populateFilters(data) {
                             "            </label>";
 
                         $optionsClass.append(check);
+
                         return false;
                     }
 
@@ -72,9 +73,9 @@ function filtersCompleted() {
         callToPopulate();//(decodeURI(parameterFromURL("s")), parameterFromURL("t"));
 }
 
-function callToPopulate(sortValue = "relevance") {
+function callToPopulate() {
 
-    let ajaxCall, data = createFilterJSON(sortValue);
+    let ajaxCall, data = createFilterJSON();
     let url = new ApiUrls().product_url + "vis/list/shopFilter/1";
 
     ajaxCall = new AjaxCall(url, 'POST', 'json', data, 'application/json');
@@ -107,7 +108,7 @@ function populate(data) {
     if (products.length === 0) {
         $popularProductColumn.append("<div class=\"noMatchFoundMessage\" >Sorry, but nothing matched your filters. " +
             "<ul><li>Try again with different filters</li> " +
-            "<li>Filter to \"Contains\" instead of \"Exact match\"</li> " +
+            "<li>Change search type under Stone or Metal to \"At least selected\" instead of \"Exact match\"</li> " +
             "<li>Request a custom design, <a href=\"customize.html\">click here</a></li>" +
             "</ul></div>");
         return;
@@ -132,6 +133,20 @@ $(document).on("click", "#sideMenuBk", function (e) {
     closeOpenFilterMenu("0", "0", "0", 'scroll', "none");
 });
 
+$(document).on("click", ".clearFilters", function (e) {
+    $(whichFilterPanelIsUsed()).find(":checkbox").prop('checked', false);
+    $(whichFilterPanelIsUsed()).find(":radio[value=false]").prop('checked', true);
+    $(".activePrice").removeClass("activePrice");
+
+
+    $("#low-price").val("");
+    $("#high-price").val("");
+    $(".currentSort").text("Relevance");
+    if (whichFilterPanelIsUsed() === ".sideMenuOptions")
+        closeOpenFilterMenu("0", "0", "0", 'scroll', "none");
+    callToPopulate();
+});
+
 function closeOpenFilterMenu(sideMenuBkWidth, sideMenuWidth, sideMenuPadding, bodyOverflow, sideMenuDisplay) {
     let $sideMenu = $("#filterMenu")
     let $sideMenuBk = $("#sideMenuBk")
@@ -147,6 +162,7 @@ $(document).on("click", ".sideMenuPanelHeader", function (e) {
     let $filterOptionsSideMenu = self.parent().find(".filterOptionsSideMenu");
     if ($filterOptionsSideMenu.is(":hidden")) {
         $filterOptionsSideMenu.css("display", "flex");
+        $filterOptionsSideMenu.find(".checkbox").show();
         self.find('i').removeClass("fa-plus").addClass("fa-minus");
     } else {
         $filterOptionsSideMenu.hide();
@@ -185,7 +201,7 @@ function whichFilterPanelIsUsed() {
 $(document).on("click", ".dropdown-content a", function (e) {
     let self = $(this);
     $(".currentSort").text((self.text()));
-    callToPopulate(self.attr('class'));
+    callToPopulate();
 });
 
 $(document).on("click", ".priceType a", function (e) {
@@ -213,17 +229,28 @@ $(document).on("click", ".customPriceRange", function (e) {
 });
 
 $(document).on("click", ".searchType :radio", function () {
-    console.log("radio button")
     callToPopulate();
 });
 
-function createFilterJSON(sortValue) {
+$(document).on("click", ".applyFilters", function (e) {
+
+    $(".filterOptionsSideMenu .currentSort").text($(".sideMenuOptions input:radio[name=sort]:checked").parent().find("span").text());
+    $(".sideMenuOptions input:radio[name=price]").parent().find("span").removeClass("activePrice");
+    $(".sideMenuOptions input:radio[name=price]:checked").parent().find("span").addClass("activePrice");
+    closeOpenFilterMenu("0", "0", "0", 'scroll', "none");
+    callToPopulate();
+    createFilterJSON();
+});
+
+function createFilterJSON() {
     let item = {}, jts = [], gems = [], mets = [];
     let checkedBoxes = $(whichFilterPanelIsUsed()).find(":checkbox:checked");
 
     checkedBoxes.each(function () {
         let $filterParentDiv = $(this).parent().parent().parent();
+
         let filterValue = $(this).val();
+        console.log(filterValue, $filterParentDiv)
 
         if ($filterParentDiv.hasClass("metalsDtos")) {
             let materialItem = {};
@@ -249,8 +276,20 @@ function createFilterJSON(sortValue) {
     if (mets.length > 0)
         item['productMetals'] = mets;
 
-    item['sortBy'] = sortValue;
-    let min = 0, max = -1, selectedPrice = $(".activePrice");
+    switch ($(whichFilterPanelIsUsed() + " .currentSort").text()) {
+        case "Price: Low to High":
+            item['sortBy'] = "pricelowToHigh";
+            break;
+        case "Price: High to Low":
+            item['sortBy'] = "priceHighToLow";
+            break;
+        case "Newest Arrivals":
+            item['sortBy'] = "newest";
+            break;
+        default:
+            item['sortBy'] = "relevance";
+    }
+    let min = 0, max = -1, selectedPrice = $(whichFilterPanelIsUsed() + " .activePrice");
     switch (selectedPrice.text()) {
         case "Under $25" :
             max = 25;
@@ -274,13 +313,15 @@ function createFilterJSON(sortValue) {
             if (selectedPrice.hasClass("priceCustom")) {
                 min = $("#low-price").val();
                 max = $("#high-price").val();
+            } else {
+                min = 0;
+                max = -1;
             }
     }
     item['min'] = min;
     item['max'] = max;
     item['exactGT'] = $(whichFilterPanelIsUsed() + " .gemstones").find(":radio:checked").val();
     item['exactMT'] = $(whichFilterPanelIsUsed() + " .metalsDtos").find(":radio:checked").val();
-
     return JSON.stringify(item);
 
 }

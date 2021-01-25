@@ -35,6 +35,11 @@ a.button1:hover, .submitBtn:hover, .button3:hover {
     cursor: pointer;
 }
 
+a.whiteonblkBtn:hover {
+    background-color: rgba(0, 0, 0, 1) !important;
+    color: #FFFFFF !important;
+}
+
 @media all and (max-width: 30em) {
     a.button1 {
         display: block;

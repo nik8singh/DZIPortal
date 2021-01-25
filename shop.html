@@ -31,17 +31,17 @@
         <div style="height: 25px; display: flex; justify-content: flex-end">
             <a href="javascript:void(0)" id="filterMenuClose" style="font-size: 50px; color: black; margin-right: 5px">&times;</a>
         </div>
-        <h2 style="color: #303030;">DZI Creations Jewelry Shop - Filter and Sort</h2>
+        <h2 style="color: #303030;">Shop - Filter and Sort</h2>
 
         <div class="sideMenuOptions">
             <div class="sideMenuButtons" style="margin-bottom: 30px">
-                <a class="button2">Clear all filters</a>
-                <a class="button4" style="width: 100px;">Apply</a>
+                <a class="button2 clearFilters">Clear all filters</a>
+                <a class="button4 applyFilters" style="width: 100px;">Apply</a>
             </div>
             <div class="filterParent sorts">
                 <h3 class="sideMenuPanelHeader">Sort<i class="fas fa-plus moreFilter"></i></h3>
                 <div class="filterOptionsSideMenu filterDivBoth" hidden>
-
+                    <span class="currentSort" hidden>Relevance</span>
                     <label class="checkbox">
                         <input name="sort" type="radio"/>
                         <span>Price: Low to High</span>
@@ -58,30 +58,7 @@
                     </label>
 
                     <label class="checkbox">
-                        <input name="sort" type="radio"/>
-                        <span>Relevance</span>
-                    </label>
-
-                </div>
-                <div class="filterOptionsSideMenu filterDivBoth" hidden>
-
-                    <label class="checkbox">
-                        <input name="sort" type="radio"/>
-                        <span>Price: Low to High</span>
-                    </label>
-
-                    <label class="checkbox">
-                        <input name="sort" type="radio"/>
-                        <span>Price: High to Low</span>
-                    </label>
-
-                    <label class="checkbox">
-                        <input name="sort" type="radio"/>
-                        <span>Newest Arrivals</span>
-                    </label>
-
-                    <label class="checkbox">
-                        <input name="sort" type="radio"/>
+                        <input checked name="sort" type="radio"/>
                         <span>Relevance</span>
                     </label>
 
@@ -116,10 +93,6 @@
                         <span>$200 & Above</span>
                     </label>
 
-                    <label class="checkbox">
-                        <input name="price" type="radio"/>
-                    </label>
-
                 </div>
             </div>
             <div class="filterParent jewelryTypes">
@@ -130,12 +103,38 @@
             <div class="filterParent gemstones">
                 <h3 class="sideMenuPanelHeader">Stone Type <i class="fas fa-plus moreFilter"></i></h3>
                 <div class="filterOptionsSideMenu filterDivBoth">
+                    <div class="searchType">
+                        <label class="checkbox">
+                            <input name="exactOrContainsMTside" type="radio" value="true"/>
+                            <span>Exact match - Selected only</span>
+                        </label>
+
+                        <label class="checkbox">
+                            <input checked name="exactOrContainsMTside" type="radio" value="false"/>
+                            <span> At least selected</span>
+                        </label>
+                    </div>
                 </div>
             </div>
             <div class="filterParent metalsDtos">
                 <h3 class="sideMenuPanelHeader">Metal Type <i class="fas fa-plus moreFilter"></i></h3>
                 <div class="filterOptionsSideMenu filterDivBoth">
+                    <div class="searchType">
+                        <label class="checkbox">
+                            <input name="exactOrContainsGTside" type="radio" value="true"/>
+                            <span>Exact match - Selected only</span>
+                        </label>
+
+                        <label class="checkbox">
+                            <input checked name="exactOrContainsGTside" type="radio" value="false"/>
+                            <span> At least selected</span>
+                        </label>
+                    </div>
                 </div>
+            </div>
+            <div class="sideMenuButtons" style="margin-bottom: 30px">
+                <a class="button2 clearFilters">Clear all filters</a>
+                <a class="button4 applyFilters" style="width: 100px;">Apply</a>
             </div>
         </div>
 
@@ -151,12 +150,12 @@
             <h2>DZI Creations Jewelry Shop</h2>
             <div style="min-width: 230px; text-align: center">
                 <div class="dropdown sortDP">
-                    <a> Sort - <span class="currentSort">Featured</span> <i class="fas fa-sort-down"></i></a>
+                    <a> Sort - <span class="currentSort">Relevance</span> <i class="fas fa-sort-down"></i></a>
                     <div class="dropdown-content">
-                        <a class="pricelowToHigh">Price: Low to High</a>
-                        <a class="priceHighToLow">Price: High to Low</a>
-                        <a class="newest">Newest Arrivals</a>
-                        <a class="relevance">Relevance</a>
+                        <a>Price: Low to High</a>
+                        <a>Price: High to Low</a>
+                        <a>Newest Arrivals</a>
+                        <a>Relevance</a>
                     </div>
                 </div>
             </div>
@@ -166,9 +165,10 @@
                 <i class="fas fa-filter"></i> Filter & Sort
             </div>
         </div>
+
         <div class="product-list-container">
             <div class="filter-panel">
-                <!--                <h3 class="filterTitle">Filters</h3>-->
+                <a class="button2 whiteonblkBtn clearFilters" style="padding: 4px 16px; width: 100%">Clear Filters</a>
                 <div class="filterParent jewelryTypes">
                     <h3>Jewelry Type</h3>
                     <div class="filterOptions filterDivBoth filterOptionsShort"></div>

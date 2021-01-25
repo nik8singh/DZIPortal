@@ -57,7 +57,21 @@ $(document).ready(function () {
     document.body.style.msTransform = scale;       // IE 9
     document.body.style.transform = scale;     // General
 
+});
 
+/* Anything that gets to the document
+   will hide the dropdown */
+$(document).click(function () {
+    $(".dropdown-content").hide();
+});
+$(document).on("click", ".dropdown", function (e) {
+
+    let dropdownContent = $(this).find(".dropdown-content");
+    if (dropdownContent.is(":visible"))
+        dropdownContent.hide();
+    else
+        dropdownContent.show();
+    e.stopPropagation();
 });
 
 $(document).on("click", ".logMeOut", function () {
@@ -85,3 +99,4 @@ function closeSideMenu(sideMenuBkWidth, sideMenuWidth, sideMenuPadding, bodyOver
     $('body').css('overflow', bodyOverflow);
     $sideMenu.css("display", sideMenuDisplay);
 }
+
