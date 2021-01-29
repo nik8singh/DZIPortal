@@ -11,4 +11,5 @@ export default class ApiUrls {
     image_url = this.base_url + "image/";
     show_url = this.base_url + "shop/";
     order_url = this.base_url + "order/";
+    cart_url = this.base_url + "cart/";
 }

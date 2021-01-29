@@ -90,16 +90,26 @@ $("#login").on("submit", function (event) {
             localStorage.setItem("UE", username);
 
             $.ajax({
-                url: new ApiUrls().user_url + "cus/userfirstname?e=" + username,
+                url: new ApiUrls().user_url + "cus/user?e=" + username,
                 type: 'GET',
-                dataType: 'text',
+                dataType: 'json',
                 headers: {
                     "Authorization": response
                 },
                 success: function (res) {
-                    localStorage.setItem("FN", res);
+                    let bagCount = 0;
+                    $.each(res.cartItemDTOS, function (index, item) {
+                        bagCount += item.itemQuantity;
+                    });
+
+                    localStorage.setItem("bagCount", bagCount);
+                    localStorage.setItem("FN", res.userFirstName);
+
+                    $.cookie("UI", res.userId, {path: '/'});
+
                     if ($('#keepActive').is(':checked'))
                         $.cookie("KP", true, {path: '/'});
+
                 }, error: function (jqXHR, exception) {
                     console.log(jqXHR.status);
                     console.log(exception);

@@ -1,10 +1,12 @@
-import {parameterFromURL} from "./utils/commonFunctions.js";
+import {parameterFromURL, updateBagCountDisplay} from "./utils/commonFunctions.js";
 import AjaxCall from "./utils/ajaxCall.js";
 import ApiUrls from "./domains/apiUrls.js";
 import ProductDomain from "./domains/productDomain.js";
 
+let productID;
+let productDomain;
 $(document).ready(function () {
-    let productID = decodeURI(parameterFromURL("p"))
+    productID = decodeURI(parameterFromURL("p"))
     let ajaxCall = new AjaxCall(new ApiUrls().product_url + "vis/p/" + productID, 'GET', 'json');
     ajaxCall.makeCall(populatePage);
 });
@@ -15,13 +17,66 @@ $(document).on("click", ".dropdown-content a", function (e) {
 });
 
 function populatePage(data) {
-    let productDomain = new ProductDomain(data);
+    productDomain = new ProductDomain(data);
     console.log(productDomain);
     productDomain.populateProductPage();
 
 }
 
 $(document).on("click", ".image-thumbnails img", function (e) {
-    let self = $(this);
     $(".image-active").html("<img src=\"" + $(this).attr('src') + "\">");
 });
+
+$(document).on("click", ".addToBag", function (e) {
+    let item = {};
+    item["itemQuantity"] = $(".quantity").text();
+    item["productId"] = productID;
+
+    if (typeof $.cookie('TSS') !== 'undefined') {
+
+        item["userId"] = $.cookie('UI');
+        let ajaxCall = new AjaxCall(new ApiUrls().cart_url + "cus/save", 'POST', 'json', JSON.stringify(item), 'application/json');
+        ajaxCall.makeCall(setCount);
+
+    } else {
+
+        let bag = [], flag = false;
+        let count = parseInt(localStorage.getItem("bagCount"));
+
+        if (localStorage.getItem("bagCount") !== null) {
+            bag = JSON.parse(localStorage.getItem("bagContent"));
+
+            $.each(bag, function (key, value) {
+                if (value.productId === item.productId) {
+                    value.itemQuantity = (parseInt(item.itemQuantity) + parseInt(value.itemQuantity)).toString();
+                    flag = true;
+                    return false;
+                }
+            });
+
+            count += parseInt(item.itemQuantity);
+        } else {
+            count = item.itemQuantity;
+        }
+
+        if (!flag)
+            bag.push(item)
+
+        console.log(bag);
+
+        localStorage.setItem("bagContent", JSON.stringify(bag));
+        localStorage.setItem("bagCount", count.toString());
+
+        showBagCount();
+    }
+});
+
+function setCount(data) {
+    localStorage.setItem("bagCount", data.totalQuantity);
+    showBagCount();
+}
+
+function showBagCount() {
+    $(".message").show();
+    updateBagCountDisplay();
+}

@@ -48,6 +48,8 @@ export default class SessionHandler {
         $.removeCookie('KP', {path: '/'});
         localStorage.removeItem("UE");
         localStorage.removeItem("FN");
+        localStorage.removeItem("UI");
+        localStorage.removeItem("bagCount");
         clearInterval(this.refresh);
         clearInterval(this.idleInterval);
         window.location.replace("login.html");

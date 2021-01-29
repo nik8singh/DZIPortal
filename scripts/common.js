@@ -1,4 +1,5 @@
 import SessionHandler from "./utils/sessionHandler.js";
+import {updateBagCountDisplay} from "./utils/commonFunctions.js";
 
 export let sessionHandler = new SessionHandler();
 
@@ -47,7 +48,7 @@ $(document).ready(function () {
         }
 
         $sidemenuList.prepend(prependOptions);
-
+        updateBagCountDisplay();
 
     });
 

@@ -24,7 +24,7 @@ export default class AjaxCall {
             error: function (requestObject, error, errorThrown) {
 
                 if (~requestObject.responseText.indexOf("JWTAuthorizationFilter") || errorThrown === "Forbidden")
-                    window.location.replace("../errors/403.html");
+                    window.location.replace("errors/403.html");
 
                 console.log(requestObject.responseText, error, errorThrown)
 

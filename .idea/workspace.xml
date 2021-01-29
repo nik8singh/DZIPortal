@@ -2,18 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bd3918a-0777-40e4-b7d6-5cd37495a5d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/product-temp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/domains/productDomain.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/productPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/utils/shopFilters.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/shop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/domains/apiUrls.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/domains/apiUrls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/productPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/productPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/utils/ajaxCall.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/utils/ajaxCall.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/utils/commonFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/utils/commonFunctions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/utils/sessionHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/utils/sessionHandler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/myfields.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/myfields.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/product.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/product.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopHome.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopHome.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/shop.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +106,7 @@
       <workItem from="1610778520828" duration="30588000" />
       <workItem from="1610959348849" duration="60833000" />
       <workItem from="1611385028060" duration="9270000" />
-      <workItem from="1611597995726" duration="9320000" />
+      <workItem from="1611597995726" duration="26528000" />
     </task>
     <task id="LOCAL-00001" summary="Home page responsive completed">
       <created>1608883235438</created>
@@ -192,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611362745350</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Shop filters  - mobile&#10;Product page">
+      <created>1611610739250</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1611610739250</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,7 +313,8 @@
     <MESSAGE value="shop filter see more/see less" />
     <MESSAGE value="shop filter fixes" />
     <MESSAGE value="Shop filters  - stone metal combo pending" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shop filters  - stone metal combo pending" />
+    <MESSAGE value="Shop filters  - mobile&#10;Product page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shop filters  - mobile&#10;Product page" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

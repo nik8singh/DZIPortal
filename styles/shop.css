@@ -162,12 +162,8 @@
 
 .category_pane {
     width: 150px;
-    min-height: fit-content;
+    min-height: 245px;
 }
-
-/*.product-img-title:hover{*/
-/*    color: #003ad7!important;*/
-/*}*/
 
 .category_title {
     padding-left: 20px;
@@ -402,6 +398,7 @@
     margin-top: 20px;
 }
 
+
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
@@ -480,6 +477,10 @@
         margin: 30px;
     }
 
+
+    .category_pane {
+        min-height: fit-content;
+    }
 }
 
 @media (max-width: 650px) {
