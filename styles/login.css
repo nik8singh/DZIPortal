@@ -237,11 +237,11 @@ form {
     }
 
     .register-container {
-        margin-top: 0 !important;
+        /*margin-top: 0 !important;*/
     }
 
     .login-container {
-        margin-top: 0 !important;
+        /*margin-top: 0 !important;*/
         margin-bottom: 10px !important;
     }
 

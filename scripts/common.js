@@ -45,6 +45,7 @@ $(document).ready(function () {
             $("#loginLink").show();
             $("#accountOptions").hide();
             prependOptions = "<li class=\"sideMenu-login-name\" style=\"border-bottom: rgba(255,255,255,0.5) 1px solid; margin-bottom: 10px; margin-top: 20px; color: lightblue\"><a href=\"login.html\">Login / Sign up</a></li>";
+            localStorage.setItem("bagCount", JSON.parse(localStorage.getItem("bagContent")).length.toString());
         }
 
         $sidemenuList.prepend(prependOptions);

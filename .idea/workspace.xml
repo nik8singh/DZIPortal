@@ -2,19 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bd3918a-0777-40e4-b7d6-5cd37495a5d5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/bag.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/checkout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/bag.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/bag.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/domains/apiUrls.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/domains/apiUrls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/productPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/productPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/utils/ajaxCall.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/utils/ajaxCall.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/utils/commonFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/utils/commonFunctions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/utils/sessionHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/utils/sessionHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/shop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopHome.html" beforeDir="false" afterPath="$PROJECT_DIR$/shopHome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/shop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/myfields.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/myfields.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -59,7 +58,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DZIAdmin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -83,14 +82,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="product.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/DZIPortal/product.html">
+    <configuration name="bag.html" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost/DZIPortal/bag.html">
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug.product.html" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -106,7 +100,9 @@
       <workItem from="1610778520828" duration="30588000" />
       <workItem from="1610959348849" duration="60833000" />
       <workItem from="1611385028060" duration="9270000" />
-      <workItem from="1611597995726" duration="26528000" />
+      <workItem from="1611597995726" duration="26799000" />
+      <workItem from="1611883416291" duration="1487000" />
+      <workItem from="1612046250797" duration="14646000" />
     </task>
     <task id="LOCAL-00001" summary="Home page responsive completed">
       <created>1608883235438</created>
@@ -199,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611610739250</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add to bag logged in and not logged in">
+      <created>1611878896016</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1611878896016</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +317,8 @@
     <MESSAGE value="shop filter fixes" />
     <MESSAGE value="Shop filters  - stone metal combo pending" />
     <MESSAGE value="Shop filters  - mobile&#10;Product page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shop filters  - mobile&#10;Product page" />
+    <MESSAGE value="Add to bag logged in and not logged in" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add to bag logged in and not logged in" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

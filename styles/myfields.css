@@ -57,7 +57,7 @@ a.whiteonblkBtn:hover {
 
 .button4:active,
 .button4:hover {
-    font-weight: 600;
+    /*font-weight: 600;*/
     background-color: rgb(74, 141, 139);
     color: #FFFFFF !important;
 }
@@ -68,7 +68,7 @@ a.whiteonblkBtn:hover {
     cursor: pointer;
     color: #FFFFFF;
     text-align: center;
-    background-color: rgb(104, 200, 198);
+    background-color: rgb(91, 183, 179);
 
 }
 

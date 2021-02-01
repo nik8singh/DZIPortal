@@ -18,7 +18,6 @@ $(document).on("click", ".dropdown-content a", function (e) {
 
 function populatePage(data) {
     productDomain = new ProductDomain(data);
-    console.log(productDomain);
     productDomain.populateProductPage();
 
 }
@@ -39,7 +38,10 @@ $(document).on("click", ".addToBag", function (e) {
         ajaxCall.makeCall(setCount);
 
     } else {
-
+        item["image_secure_url"] = $(".image-active img").prop("src");
+        item["productName"] = $(".product-name h2").text();
+        let price = $(".product-price span").text();
+        item["productPrice"] = price.substring(1, price.length)
         let bag = [], flag = false;
         let count = parseInt(localStorage.getItem("bagCount"));
 
@@ -62,6 +64,7 @@ $(document).on("click", ".addToBag", function (e) {
         if (!flag)
             bag.push(item)
 
+        console.log(item);
         console.log(bag);
 
         localStorage.setItem("bagContent", JSON.stringify(bag));
