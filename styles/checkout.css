@@ -1,0 +1,132 @@
+.body_container {
+    margin-bottom: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+hr {
+    border: rgba(123, 123, 123, 0.3) 1px solid;
+}
+
+/* ---------------------------------------------------
+    Summary
+----------------------------------------------------- */
+
+.orderSummary {
+    min-height: 20px;
+    display: flex;
+    background-color: rgba(105, 104, 104, 0.1);
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+.showMore {
+    align-self: center;
+    margin: 0 20px;
+    color: #004c4c;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.showMoreText:hover {
+    cursor: pointer;
+    color: #027272;
+}
+
+.showMore i {
+    margin: 0 10px;
+}
+
+.showMore-Price {
+    color: black;
+    font-size: 17px;
+}
+
+.breadcrumb {
+    margin: 20px;
+    font-size: small;
+}
+
+.breadcrumb i {
+    font-size: 10px;
+    margin: 0 3px;
+}
+
+.breadcrumb a {
+    color: #003ad7;
+}
+
+.summaryItemsContainer {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.changeMind {
+    margin-bottom: 10px;
+}
+
+.changeMind a {
+    color: #003ad7;
+}
+
+.summaryItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: rgba(123, 123, 123, 0.3) 1px solid;
+
+    align-items: center;
+    width: 100%;
+}
+
+.itemName {
+    display: flex;
+    align-items: center;
+}
+
+.itemName img {
+    max-width: 100px;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.itemPrice {
+    margin: 5px
+}
+
+
+/* ---------------------------------------------------
+    Checkout
+----------------------------------------------------- */
+
+.checkoutType {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: center;
+}
+
+.checkoutType div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 150px;
+    width: 300px;
+}
+
+.checkoutType a {
+    width: 150px;
+    margin: 10px 0;
+}
+
+.noAccount {
+    border-right: rgba(1, 110, 110, 0.3) 1px solid;
+}
+
+.noAccount > span > a {
+    color: #003ad7;
+    text-decoration: underline;
+}

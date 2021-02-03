@@ -43,9 +43,9 @@ $(document).on("click", ".addToBag", function (e) {
         let price = $(".product-price span").text();
         item["productPrice"] = price.substring(1, price.length)
         let bag = [], flag = false;
-        let count = parseInt(localStorage.getItem("bagCount"));
 
-        if (localStorage.getItem("bagCount") !== null) {
+        let count = parseInt(localStorage.getItem("bagCount"));
+        if (count !== null && count !== 0) {
             bag = JSON.parse(localStorage.getItem("bagContent"));
 
             $.each(bag, function (key, value) {
@@ -64,9 +64,6 @@ $(document).on("click", ".addToBag", function (e) {
         if (!flag)
             bag.push(item)
 
-        console.log(item);
-        console.log(bag);
-
         localStorage.setItem("bagContent", JSON.stringify(bag));
         localStorage.setItem("bagCount", count.toString());
 
@@ -80,6 +77,6 @@ function setCount(data) {
 }
 
 function showBagCount() {
-    $(".message").show();
+    $(".message").append("<div><span style=\"color: darkgreen\"> Added to Bag Successfully. </span><a href=\"bag.html\" style=\"color: blue; text-decoration: underline\">View Shopping bag</a></div>").show();
     updateBagCountDisplay();
 }

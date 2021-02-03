@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bd3918a-0777-40e4-b7d6-5cd37495a5d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bag.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/checkout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/bag.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/bag.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/checkout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/checkout.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bag.html" beforeDir="false" afterPath="$PROJECT_DIR$/bag.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/bag.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/bag.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/productPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/productPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/myfields.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/myfields.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +81,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="bag.html" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost/DZIPortal/bag.html">
+    <configuration name="checkout.html" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost/DZIPortal/checkout.html">
       <method v="2" />
     </configuration>
   </component>
@@ -102,7 +101,7 @@
       <workItem from="1611385028060" duration="9270000" />
       <workItem from="1611597995726" duration="26799000" />
       <workItem from="1611883416291" duration="1487000" />
-      <workItem from="1612046250797" duration="14646000" />
+      <workItem from="1612046250797" duration="30413000" />
     </task>
     <task id="LOCAL-00001" summary="Home page responsive completed">
       <created>1608883235438</created>
@@ -202,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611878896016</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Bag completed">
+      <created>1612156371225</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1612156371225</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,7 +324,8 @@
     <MESSAGE value="Shop filters  - stone metal combo pending" />
     <MESSAGE value="Shop filters  - mobile&#10;Product page" />
     <MESSAGE value="Add to bag logged in and not logged in" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add to bag logged in and not logged in" />
+    <MESSAGE value="Bag completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bag completed" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

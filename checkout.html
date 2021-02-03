@@ -14,6 +14,7 @@
     <!-- Custom CSS   -->
     <link href="styles/myfields.css" rel="stylesheet">
     <link href="styles/common.css" rel="stylesheet">
+    <link href="styles/checkout.css" rel="stylesheet">
 
     <!-- Fonts   -->
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/3dfa83d19f.js"></script>
@@ -26,12 +27,53 @@
 
 <div class="flex_wrapped_column">
     <div class="body_container">
-        <div style="display: flex; justify-content: center; margin: 20px">Checking out</div>
+        <div class="orderSummary">
+            <div class="showMore">
+                <div class="showMoreText">
+                    <i class="fas fa-shopping-bag"></i> Show Order Summary <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="showMore-Price">
+                    Subtotal <span></span>
+                </div>
+            </div>
+            <div class="summaryItemsContainer" hidden>
+                <div class="changeMind">Change your mind? Go back to <a href="bag.html">shopping bag</a></div>
+
+
+            </div>
+        </div>
+        <div class="breadcrumb">
+            <a href="bag.html">Bag</a>
+            <i class="fas fa-chevron-right"></i>
+            <a class="checkoutTypeBC">Checkout Type</a>
+            <i class="fas fa-chevron-right checkoutTypeBC"></i>
+            <a>Shipping</a>
+            <i class="fas fa-chevron-right"></i>
+            <a>Payment</a>
+        </div>
+        <hr>
+        <div class="checkoutType">
+            <div class="noAccount">
+                <h2>No account? No problem.</h2>
+                <a class="button4 checkoutGuest">Continue as guest</a>
+                <span>Or create a <a href="login.html?bk=checkout.html&reg=true">new account</a></span>
+            </div>
+            <div class="signIn">
+                <h2>Existing Customer?</h2>
+                <a class="button4" href="login.html?bk=checkout.html">Log In</a>
+            </div>
+        </div>
+
+        <div class="Shipping">
+
+        </div>
+
     </div>
 </div>
 
 <footer class="flex_center big_white " id="footer"></footer>
 
 <script src="scripts/common.js" type="module"></script>
+<script src="scripts/checkout.js" type="module"></script>
 </body>
 </html>

@@ -13,26 +13,31 @@ $(document).ready(function () {
 });
 
 function populatePage(data) {
-    console.log(data)
     let subTotal = null;
     let tq = null;
-
 
     if (typeof $.cookie('TSS') !== 'undefined') {
         tq = data.totalQuantity;
         subTotal = data.cartCost;
         data = data.cartItemDTOS;
-
+    } else {
+        let bagItems = {};
+        bagItems["cartItemDTOS"] = JSON.parse(localStorage.getItem("bagContent"));
+        let ajaxCall = new AjaxCall(new ApiUrls().order_url + "vis/subtotal", 'POST', 'text', JSON.stringify(bagItems), 'application/json');
+        ajaxCall.makeCall(displaySubTotal);
     }
     addItemRow(data, subTotal, tq);
 }
 
+function displaySubTotal(subTotal) {
+    $(".subtotalPrice").text("$" + subTotal);
+}
 
 function addItemRow(data, subTotal, totalQuantity) {
     let bagSide = $(".bagSide")
-    let st = 0, tq = 0;
+    let tq = 0;
 
-    if (data.length === 0) {
+    if (data === null || data.length === 0) {
         bagSide.append("<div style=\"margin: 20px\">\n" +
             "                Your bag is empty. Explore our <a href=\"shop.html?s=rdm&t=all\" style=\"color: #003bff; text-decoration: underline\">shop</a> or make a <a style=\"color: #003bff; text-decoration: underline\"href=\"customize.html\">custom order</a>\n" +
             "            </div>");
@@ -40,8 +45,7 @@ function addItemRow(data, subTotal, totalQuantity) {
     }
 
     $.each(data, function (key, value) {
-        if (subTotal === null) {
-            st += parseFloat(value.productPrice);
+        if (totalQuantity === null) {
             tq += parseInt(value.itemQuantity);
         }
         let bagItem = "<div class=\"bagItem\" id=\"" + value.cartItemId + "\">\n" +
@@ -75,12 +79,14 @@ function addItemRow(data, subTotal, totalQuantity) {
         bagSide.append(bagItem);
     });
 
-    if (subTotal === null) {
-        subTotal = st;
+    if (subTotal !== null) {
+        $(".subtotalPrice").text("$" + subTotal);
+    } else {
         totalQuantity = tq;
     }
+
     $(".totalItems").text("(" + totalQuantity + " items)");
-    $(".subtotalPrice").text("$" + subTotal);
+
 }
 
 $(document).on("click", ".deleteFromBag", function (e) {

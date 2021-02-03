@@ -1,6 +1,7 @@
 import SessionHandler from "./utils/sessionHandler.js";
 import {updateBagCountDisplay} from "./utils/commonFunctions.js";
 
+
 export let sessionHandler = new SessionHandler();
 
 $(document).ready(function () {
@@ -41,11 +42,15 @@ $(document).ready(function () {
                     sessionHandler.idleTime = 0;
                 });
             }
+
+
         } else {
             $("#loginLink").show();
             $("#accountOptions").hide();
             prependOptions = "<li class=\"sideMenu-login-name\" style=\"border-bottom: rgba(255,255,255,0.5) 1px solid; margin-bottom: 10px; margin-top: 20px; color: lightblue\"><a href=\"login.html\">Login / Sign up</a></li>";
-            localStorage.setItem("bagCount", JSON.parse(localStorage.getItem("bagContent")).length.toString());
+            let bagContentLength = localStorage.getItem("bagContent");
+            let count = bagContentLength !== null ? JSON.parse(bagContentLength).length.toString() : "0";
+            localStorage.setItem("bagCount", count);
         }
 
         $sidemenuList.prepend(prependOptions);

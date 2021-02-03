@@ -1,7 +1,15 @@
 import ApiUrls from "./domains/apiUrls.js";
+import AjaxCall from "./utils/ajaxCall.js";
+import {parameterFromURL} from "./utils/commonFunctions.js";
 
 $(document).ready(function () {
     let $mobileSignUp = $(".mobile_sign_up");
+
+    if (parameterFromURL("reg") === "true") {
+        hideLogin("Create account");
+        $("#newAccount").show();
+        $("#newCustomerInfoPanel").hide();
+    }
 
     $(".trigger_popup").click(function () {
         $('.popup-info').show();
@@ -29,6 +37,7 @@ $(document).ready(function () {
 
     $(".createNewAccount").on("click", function (event) {
         hideLogin("Create account");
+        $("#newCustomerInfoPanel").hide();
         $("#newAccount").show();
         $('errors, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top
@@ -42,6 +51,7 @@ $(document).ready(function () {
         $mobileSignUp.text("");
     }
 
+
     $(".backToSignIn").on("click", function (event) {
         let $heading = $(".login-container h2");
         $heading.parent().find("h2").text("Sign-in")
@@ -49,6 +59,7 @@ $(document).ready(function () {
         $("#newAccount").hide();
         $("#forgotPassword").hide();
         $("#login").show();
+        $("#newCustomerInfoPanel").show();
         $mobileSignUp.text("New Customer?");
     });
 
@@ -75,6 +86,7 @@ $("#login").on("submit", function (event) {
 
     let username = $("#username").val();
     let data = make_base_auth(username, $("#password").val());
+    let target = parameterFromURL("bk");
 
     $.ajax({
         url: new ApiUrls().login_url,
@@ -102,7 +114,6 @@ $("#login").on("submit", function (event) {
                         bagCount += item.itemQuantity;
                     });
 
-                    localStorage.setItem("bagCount", bagCount);
                     localStorage.setItem("FN", res.userFirstName);
 
                     $.cookie("UI", res.userId, {path: '/'});
@@ -110,12 +121,33 @@ $("#login").on("submit", function (event) {
                     if ($('#keepActive').is(':checked'))
                         $.cookie("KP", true, {path: '/'});
 
+
+                    if (target !== "") {
+                        let bag = JSON.parse(localStorage.getItem("bagContent"));
+                        if (bag !== null && bag.length > 0) {
+                            $.each(bag, function (key, value) {
+                                bagCount += parseInt(value.itemQuantity);
+                                let item = {};
+                                item["itemQuantity"] = value.itemQuantity;
+                                item["productId"] = value.productId;
+                                item["userId"] = $.cookie('UI');
+                                let ajaxCall = new AjaxCall(new ApiUrls().cart_url + "cus/save", 'POST', 'json', JSON.stringify(item), 'application/json');
+                                ajaxCall.makeCall();
+                            });
+                            localStorage.removeItem("bagContent")
+                        }
+                    }
+
+                    localStorage.setItem("bagCount", bagCount);
+
                 }, error: function (jqXHR, exception) {
                     console.log(jqXHR.status);
                     console.log(exception);
                 }, complete: function () {
                     $("#loading").remove();
-                    window.location.replace("index.html");
+                    if (target === "")
+                        target = "index.html";
+                    window.location.replace(target);
                 }
             });
 
